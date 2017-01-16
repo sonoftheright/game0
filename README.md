@@ -6,7 +6,7 @@ Welcome! Time to learn.
 
 Version: 0.0.0000
 
-This repository is for the detritus left behind by our frantic learning process! 
+This repository is for the pieces left behind by our frantic learning process! 
 We will continue to deface this repository with drab little programs until our 
 minds are hardened and our knowledge vast in the realms of syntax, design, and
 algorithmic purity! Be wary, all ye who run any .exe here!
