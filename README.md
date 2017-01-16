@@ -4,6 +4,12 @@ Edited: January 16, 2017
 
 Hello and welcome! It's time to learn.
 
+Communication:
+https://discord.gg/7VNYNZf
+https://bitbucket.org/markwarden/project-alpha
+http://bit.ly/2ivqvQ6 //that's the codeanywhere collaboration link
+
+
 ### What is this repository for? ###
 
 This repository is for the pieces left behind by our frantic learning process! We 
