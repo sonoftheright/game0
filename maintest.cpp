@@ -15,29 +15,32 @@
 global_variable BITMAPINFO BitmapInfo;
 global_variable void *BitmapMemory;
 global_variable HBITMAP BitmapHandle;
+global_variable HDC BitmapDeviceContext;
 
 internal void
 Win32ResizeWindow(int Width, int Height)
 {
 
-	if(BitmapInfo.bmiHeader.biSize)
+	if(BitmapHandle)
 	{
-		
+		DeleteObject(BitmapHandle);
 	}
+
+  	if(!BitmapDeviceContext)
+  	{
+  	  	BitmapDeviceContext = CreateCompatibleDC(0);
+  	}
+
 	BitmapInfo.bmiHeader.biSize = sizeof(BitmapInfo.bmiHeader);
 	BitmapInfo.bmiHeader.biWidth = Width;
   	BitmapInfo.bmiHeader.biHeight = Height;
   	BitmapInfo.bmiHeader.biPlanes = 1;
   	BitmapInfo.bmiHeader.biBitCount = 32;
-  	BitmapInfo.bmiHeader.biCompression BI_RGB;
-  	BitmapInfo.bmiHeader.biSizeImage = 0;
-  	BitmapInfo.bmiHeader.biXPelsPerMeter = 0;
-  	BitmapInfo.bmiHeader.biYPelsPerMeter = 0;
- 	BitmapInfo.bmiHeader.biClrUsed = 0;
-  	BitmapInfo.bmiHeader.biClrImportant = 0;
-	
-	HBITMAP BitmapHandle = CreateDIBSection(
-	      DeviceContext, &BitmapInfo,
+  	BitmapInfo.bmiHeader.biCompression = BI_RGB;
+
+
+	BitmapHandle = CreateDIBSection(
+	      BitmapDeviceContext, &BitmapInfo,
   	      DIB_RGB_COLORS,
   	      &BitmapMemory,
   	      0, 0);
@@ -50,8 +53,8 @@ Win32UpdateWindow(HDC DeviceContext, int X, int Y, int Width, int Height)
         DeviceContext,
         X, Y, Width, Height,
         X, Y, Width, Height,
-  		const VOID       *lpBits,
-  		const BITMAPINFO *lpBitsInfo,
+  		BitmapMemory,
+  		&BitmapInfo,
         DIB_RGB_COLORS, SRCCOPY
 	);
 }
@@ -76,7 +79,7 @@ MainWindowCallback(HWND Window, UINT Message,
 			int Width = ClientRect.right - ClientRect.left;
 			int Height = ClientRect.bottom - ClientRect.top;
 			//We don't need to define this yet, as we're not really drawing anything yet.
-			ResizeWindow();
+			Win32ResizeWindow(Width, Height);
 		} break;
 		case WM_CLOSE:
 		{
@@ -97,6 +100,10 @@ MainWindowCallback(HWND Window, UINT Message,
 		{
 			PAINTSTRUCT Paint;
 			HDC DeviceContext = BeginPaint(Window, &Paint);
+			int X = Paint.rcPaint.left;
+			int Y = Paint.rcPaint.top;
+			int Width = Paint.rcPaint.right - Paint.rcPaint.left;
+			int Height = Paint.rcPaint.bottom - Paint.rcPaint.top;
 			Win32UpdateWindow(DeviceContext, X, Y, Width, Height);
 		} break;
 		default:
