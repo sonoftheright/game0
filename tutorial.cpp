@@ -71,5 +71,27 @@ int main()
   //all separated by commas.
   printf("x: %d, y: %d", x, y);
   
-  //if we run this though, 
+  /*
+  if we run this though, something really weird happens:
+  j: 0, y: 110
+  j: 1, y: 1100
+  j: 2, y: 11000
+  j: 3, y: 110000
+  j: 4, y: 1100000
+  j: 5, y: 11000000
+  j: 6, y: 110000000
+  j: 7, y: 1100000000
+  j: 8, y: -1884901888
+  j: 9, y: -1669149696
+  x: 10, y: -1669149696
+  
+  The 'y' variable seems to be going a bit nuts towards the end of the loop...
+  While the expected value was being reached for, y never really made it there. This is because of a little issue with how variables work:
+  
+  the declaration for the type of the variable - in this case, 'int', or integer - is a way of telling the program that you will need a certain amount of 
+  memory temporarily in order to store a limited amount of information. In this case, the 'int' variable type is only allowed to store a value of 
+  a certain size, of which there is a maximum. In this case, the max size is 2 ^ 32 bits wide, or 4,294,967,296 possible values split in two to allow for 
+  negative values. So our variables in this case, because we've declared them as 'int's can only hold values between –2,147,483,647 and 2,147,483,647. When
+  the value of the variable gets too big, it simply wraps around until it's in the acceptable range (as you can see above).
+  */
 }
