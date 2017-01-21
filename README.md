@@ -1,12 +1,13 @@
-## Welcome! ## Version: 0.0.0000 Edited: January 16, 2017
+## Welcome! ## 
+
+Version: 0.0.0000 Edited: January 21, 2017
 
 Hello and welcome to my little learning experiment!
 
 Communication:
 https://discord.gg/7VNYNZf
-https://bitbucket.org/markwarden/project-alpha
-http://bit.ly/2ivqvQ6 //that's the codeanywhere collaboration link
 
+https://bitbucket.org/markwarden/game0
 
 ### What is this? ###
 
@@ -19,5 +20,3 @@ On the surface, so much of this seems far too complicated, but, as with all soft
 The Sims - as well as the other simulation games created by Maxis - opened a door into what games could and should be capable of expressing through basic simulation of NPC need hierarchies. Unfortunately, most of the innovation that made the Sims so fresh and exciting has long been left to stagnate, and the franchise has been converted into a cash cow that revealed itself to be more concerned with roleplay than simulation and content creation marketplace interactions than actual creative inquiry into simulations of AI sociological interaction/need prioritization and realization. 
 
 A few other games have come close to expressing deeper forays into that arena, including, intruigingly, Prison Architect, which tracks needs and fulfillment scales across an entire prison population, allowing for a devolution into riotous anarchy when the needs of prisoners aren't tended to properly.
-
-Despite this, I feel that the scope of the possibilities in this area of inquiry is too large not to take a crack at. It's high time someone gave it a try, and high time I learned how to make such an idea work. 
