@@ -1,8 +1,6 @@
-## Welcome! ##
-Version: 0.0.0000
-Edited: January 16, 2017
+## Welcome! ## Version: 0.0.0000 Edited: January 16, 2017
 
-Hello and welcome! It's time to learn.
+Hello and welcome to my little learning experiment!
 
 Communication:
 https://discord.gg/7VNYNZf
@@ -10,36 +8,16 @@ https://bitbucket.org/markwarden/project-alpha
 http://bit.ly/2ivqvQ6 //that's the codeanywhere collaboration link
 
 
-### What is this repository for? ###
+### What is this? ###
 
-This repository is for the pieces left behind by our frantic learning process! We 
-will continue to deface this repository with drab little programs until our minds 
-are hardened and our knowledge vast in the realms of syntax, design, and algorithmic 
-purity! Be wary, all ye who run any .exe here!
+game0 is my attempt to teach myself and learn more about game design, game engine architecture, long term project involvement, and programming in C++ in general. It's taken me years to realize and resolve to fulfill a lifelong dream of mine: to create games that I have always wanted to play, and to do so from scratch, by hand, without a whole lot of fuss, and without regrets. 
 
-Seriously, though: we're going to be learning how to code a game the way an ocelot 
-learns to swim in treacle: by wading in, getting dirty, and not being afraid to get 
-the heck out, rinse it all off, and start over again when we've gone far enough to
-know the way we came is closer to our goal than the way we're headed.
+My personal philosophy on games - or, more accurately, interactive simulations - has always nagged at me in the back of my mind as I scoured the increasingly varied and lengthy catalog of games available to the public these days. No one seems to want to answer the questions I have about the capabilities of games to express certain possibilities through simulation; capabilities such as experimentation in AI and politics, economics, and larger, self-organizing, societal hierarchies built on simple anthropological relationships on the most basic level. Simulations of power dynamics from a one-to-one relationship to massive power hierarchies and the dynamics of inter-group reactions and relationships. What about morality, guilt, and remorse in NPC interactions? What about flexible frameworks for AI to simulate differing preferences, express intent and perform actions based on levels of apathy and empathy, or allow political ideologies, such as prioritizing freedom and security, to shape and form deeper goals and overriding principles underlying fulfillment-seeking behavior?
 
-### How do I get set up? ###
+On the surface, so much of this seems far too complicated, but, as with all software simulations, it just needs the proper framework to represent it. And that's what I'd like to work on accomplishing. 
 
-If you're here to learn, then look at the code (running programs is for chumps!). 
-Maybe even look into past revisions of the code and see what brought us here. But
-whatever you do, keep in mind that this is more of a sandbox than an organized and
-professional workspace!
+The Sims - as well as the other simulation games created by Maxis - opened a door into what games could and should be capable of expressing through basic simulation of NPC need hierarchies. Unfortunately, most of the innovation that made the Sims so fresh and exciting has long been left to stagnate, and the franchise has been converted into a cash cow that revealed itself to be more concerned with roleplay than simulation and content creation marketplace interactions than actual creative inquiry into simulations of AI sociological interaction/need prioritization and realization. 
 
-### Contribution guidelines ###
+A few other games have come close to expressing deeper forays into that arena, including, intruigingly, Prison Architect, which tracks needs and fulfillment scales across an entire prison population, allowing for a devolution into riotous anarchy when the needs of prisoners aren't tended to properly.
 
-If you're here to learn, then make improvements to the already existing code!
-Individual files will outline their individual goals (ideally) and running objectives
-(probably), so don't be afraid to - again - look under the hood and determine purpose 
-by gazing at things for a while until they make some semblance of sense. 
-
-### Who do I talk to? ###
-
-My name's Ben. This is my project to help get some potential myself and a few team
-members in sync, coding efficiently and effectively, and moving towards the day when 
-we can all efficiently code our own portions of the project independently in such a
-way that allows the project to be sustainable, improvable, and readable to new people
-hoping to get in on the action (and maybe help us out a bit in the future).
+Despite this, I feel that the scope of the possibilities in this area of inquiry is too large not to take a crack at. It's high time someone gave it a try, and high time I learned how to make such an idea work. 
