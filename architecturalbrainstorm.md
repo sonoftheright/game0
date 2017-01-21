@@ -15,15 +15,10 @@ On the face we have:
 	- game state
 	- game data
 	- GUI elements
-
 	So let's list these out:
-
 	:input handling => GUI arrangement model => ??engine code?? => game state, data.
-
 	From the above, it looks like we need generic command translation - which might actually be a complex message system itself. And, given the fact that it's context-specific, the message system would have to be built into a sort of GUI-controller interface system.
-
 	OK, so as an example, menus:
-
 		Menu items would be stored as 'hot' areas that are clickable and might change their look when hovered over.
 
 
