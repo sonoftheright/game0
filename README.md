@@ -4,7 +4,9 @@ Hello and welcome to my little learning experiment!
 
 Communication:
 https://discord.gg/7VNYNZf
-https://bitbucket.org/markwarden/project-alpha
+
+https://bitbucket.org/markwarden/game0
+
 http://bit.ly/2ivqvQ6 //that's the codeanywhere collaboration link
 
 
