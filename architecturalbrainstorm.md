@@ -4,22 +4,14 @@ As simply as I can, I'm going to attempt to step through my conceptual map of ho
 
 On the face we have:
 	- raw input from user
-
-	who attempts to act on
-
+- who attempts to act on
 	- GUI elements
-
-	heard by
-
+- heard by
 	- event listeners
-
-	and translated by
-
+- and translated by
 	- engine code //super vague! what does this mean?
 	- game data
-
-	which performs changes on
-
+- which performs changes on
 	- game state
 	- game data
 	- GUI elements
@@ -34,4 +26,4 @@ On the face we have:
 
 		Menu items would be stored as 'hot' areas that are clickable and might change their look when hovered over.
 
-		
+
