@@ -1,6 +1,6 @@
 ## Welcome! ## 
 
-Version: 0.0.0000 Edited: January 21, 2017
+Version: 0.0.0000 Edited: January 22, 2017
 
 Hello and welcome to my little learning experiment!
 
