@@ -1,0 +1,686 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"init",
+				"initViewport"
+			],
+			[
+				"worldFo",
+				"worldFocusCoordX"
+			],
+			[
+				"world",
+				"worldFocusCoordX"
+			],
+			[
+				"populate",
+				"populateIteration"
+			],
+			[
+				"po",
+				"populateIteration"
+			],
+			[
+				"print",
+				"printEnvironmentInfo"
+			],
+			[
+				"Po",
+				"POSITION"
+			],
+			[
+				"get",
+				"getGridpointPosition"
+			],
+			[
+				"grid",
+				"gridPoints"
+			],
+			[
+				"bottom",
+				"bottomMiddle"
+			],
+			[
+				"neighborMa",
+				"neighborMaxZ"
+			],
+			[
+				"MAP",
+				"MAP_HEIGHT"
+			],
+			[
+				"DEF",
+				"DEF_MAP_WIDTH"
+			],
+			[
+				"DEF_MA",
+				"DEF_MAP_HEIGHT"
+			],
+			[
+				"MAX",
+				"MAX_INPUT_LENGTH"
+			],
+			[
+				"Buffer",
+				"BufferDescription"
+			],
+			[
+				"balance",
+				"balanceCheck"
+			],
+			[
+				"server",
+				"serverInfo"
+			],
+			[
+				"N",
+				"NETWORK_OK"
+			],
+			[
+				"listening",
+				"listeningSocket"
+			],
+			[
+				"NETO",
+				"NETWORK_ERROR"
+			],
+			[
+				"tripl",
+				"tripleByValue"
+			],
+			[
+				"triple",
+				"tripleByValue"
+			],
+			[
+				"guess",
+				"guesses"
+			],
+			[
+				"XInput",
+				"XInputSetState"
+			],
+			[
+				"x_inpu",
+				"x_input_get_state"
+			],
+			[
+				"Bitmap",
+				"BitmapHeight"
+			],
+			[
+				"Window",
+				"WindowRect"
+			],
+			[
+				"BitmA",
+				"BitmapMemorySize"
+			],
+			[
+				"BITM",
+				"BITMAPINFO"
+			],
+			[
+				"lp",
+				"lpszClassName"
+			],
+			[
+				"Win",
+				"WindowClass"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "maintest.cpp",
+			"settings":
+			{
+				"buffer_size": 4970,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "architecturalbrainstorm.md",
+			"settings":
+			{
+				"buffer_size": 546,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 104.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"orgmode",
+				"Set Syntax: orgmode"
+			],
+			[
+				"package",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 432.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"sublime.log_commands(True)",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/admin/Dropbox/game0/README.md",
+		"/C/Users/admin/Dropbox/realterm commands.mdown",
+		"/C/Users/admin/Dropbox/ds dynamic",
+		"/C/Users/admin/Dropbox/Programming/Tutorials/Handmade Hero/handmade_hero_251_source/handmade_hero_day_251_source/code/handmade_sim_region.h",
+		"/C/Users/admin/Dropbox/quora.c",
+		"/C/Users/admin/Dropbox/Programming/Tutorials/Handmade Hero/handmade_hero_251_source/handmade_hero_day_251_source/code/handmade.cpp",
+		"/C/Users/admin/Dropbox/Programming/Tutorials/Handmade Hero/handmade_hero_251_source/handmade_hero_day_251_source/code/handmade_entity.cpp",
+		"/C/Users/admin/Dropbox/Programming/Tutorials/Handmade Hero/handmade_hero_251_source/handmade_hero_day_251_source/code/handmade_entity.h",
+		"/C/Users/admin/Dropbox/Programming/Tutorials/Handmade Hero/handmade_hero_251_source/handmade_hero_day_251_source/code/handmade_sim_region.cpp",
+		"/C/Users/admin/Dropbox/game0/game0/README.md",
+		"/C/Users/admin/Desktop/JavaScript/JavaScript.sublime-syntax",
+		"/C/Users/admin/Dropbox/Programming/C++/Project Alpha/project-alpha/maintest.cpp",
+		"/C/Users/admin/Desktop/JavaScript/syntax_test_js.js",
+		"/C/Users/admin/Dropbox/Kowloon/build/basic git.bat",
+		"/C/Users/admin/Dropbox/Programming/12days.c",
+		"/C/Users/admin/Desktop/This is a Word document - Copy.xml",
+		"/C/Users/admin/Desktop/This is a Word document - Copy.docx/word/document.xml",
+		"/C/Users/admin/Dropbox/Programming/C++/SDL Fun/build.bat",
+		"/C/Users/admin/Dropbox/Programming/C++/SDL Fun/SDLFun.h",
+		"/C/Users/admin/Dropbox/Programming/C++/SDL Fun/assets.cpp",
+		"/C/Users/admin/Dropbox/Programming/C++/SDL Fun/assets.h",
+		"/C/Users/admin/Dropbox/Programming/C++/SDL Fun/map.cpp",
+		"/C/Users/admin/Dropbox/Programming/C++/SDL Fun/SDLFun.cpp",
+		"/C/Users/admin/Dropbox/Programming/C++/SDL Fun/SDLFunHome.h",
+		"/C/Users/admin/Dropbox/Programming/C++/ToDo list for Raw Windowed Program",
+		"/C/Users/admin/Dropbox/Programming/Tutorials/Handmade Hero/handmade_hero_day_352_source/code/build.bat",
+		"/C/Users/admin/Dropbox/Programming/Tutorials/Handmade Hero/handmade_hero_day_352_source/code/win32_handmade.cpp",
+		"/C/Users/admin/Dropbox/Programming/Tutorials/Handmade Hero/handmade_hero_day_352_source/readme.txt",
+		"/C/Users/admin/Dropbox/Programming/Tutorials/Handmade Hero/handmade_hero_day_352_source/code/win32_handmade.h",
+		"/C/Users/admin/Dropbox/Programming/Tutorials/Handmade Hero/handmade_hero_251_source/handmade_hero_day_251_source/code/build.bat",
+		"/C/Users/admin/Dropbox/Programming/Tutorials/Handmade Hero/handmade_hero_010_source/handmade/code/build.bat",
+		"/C/Users/admin/Dropbox/Programming/C++/SDL Fun/main.cpp",
+		"/C/Users/admin/Dropbox/Kowloon/index.html",
+		"/C/Users/admin/Dropbox/Kowloon/events.js",
+		"/C/Users/admin/Dropbox/Kowloon/context.js",
+		"/C/Users/admin/Dropbox/Kowloon/blendingbedlam.js",
+		"/C/Users/admin/Dropbox/Kowloon/dataprinting.js",
+		"/C/Users/admin/Dropbox/Kowloon/map.js",
+		"/C/Users/admin/Downloads/SDL2-2.0.5/SDL2-2.0.5/README.txt",
+		"/D/Program Files/Stream/steamapps/common/RollerCoaster Tycoon Deluxe/readme.txt",
+		"/C/Users/admin/Dropbox/Jygdaal's Keep/main.c",
+		"/C/Users/admin/Dropbox/Jygdaal's Keep/main.h",
+		"/C/Users/admin/Desktop/test.html",
+		"/C/Users/admin/Dropbox/Programming/C++/main.cpp",
+		"/C/Users/admin/Dropbox/Programming/Java/angry cousins outline",
+		"/C/Users/admin/Desktop/guests",
+		"/C/Users/admin/Dropbox/Programming/C/Tinkerings/main.c",
+		"/C/Users/admin/Dropbox/D&D/3.5 Character Sheet.html",
+		"/C/Users/admin/Dropbox/D&D/js.js",
+		"/C/Users/admin/Dropbox/D&D/DnD.5e/Nootksy.nfo",
+		"/C/Users/admin/Dropbox/Programming/Javascript/WebGL/index2.html",
+		"/C/Users/admin/Dropbox/Programming/Javascript/WebGL/webgltest2.js",
+		"/C/Users/admin/Dropbox/Programming/Javascript/WebGL/webgltest.js",
+		"/C/Users/admin/Downloads/FP223B3X13005852_20160912.conf",
+		"/C/Users/admin/Dropbox/Server/server.js",
+		"/C/Users/admin/Dropbox/Server/public/js/GoingApey.js",
+		"/C/Users/admin/Dropbox/Server/public/index.html",
+		"/C/Users/admin/Dropbox/Server/webgltest.js",
+		"/C/main.cpp",
+		"/C/Users/admin/Dropbox/Programming/Javascript/WebGL/index.html",
+		"/C/Users/admin/Downloads/toji-gl-matrix-v2.3.2-14-g256747e/toji-gl-matrix-256747e/README.md",
+		"/C/Users/admin/Dropbox/Programming/Javascript/Frenetic Etchings App/js.js",
+		"/E/Sync Files/Mobile Sync/Programming/Frenetic Etchings App/js.js",
+		"/E/Sync Files/Mobile Sync/Programming/Frenetic Etchings App/index.html",
+		"/C/Users/admin/Dropbox/Programming/Javascript/Blending Bedlam/blendingbedlam.js",
+		"/C/Users/admin/Dropbox/Programming/Javascript/going-apey/js/Going Apey.js",
+		"/C/Users/admin/Dropbox/Programming/Javascript/Blending Bedlam/WWpopulateCoordinates.js",
+		"/C/Users/admin/Dropbox/Jygdaal's Keep/Notes/calculations for ideal gridpoint size on larger screens",
+		"/C/Users/admin/Dropbox/Programming/Javascript/Blending Bedlam/BlendingBedlam notes",
+		"/C/Users/admin/Dropbox/Jygdaal's Keep/build.bat",
+		"/C/Users/admin/Dropbox/Jygdaal's Keep/Notes/Notes on Perlin Noise",
+		"/C/Users/admin/Dropbox/Jygdaal's Keep/Notes/Future Data Structure Implementation Goals",
+		"/C/Users/admin/Downloads/tutorial password cheat engine",
+		"/C/Users/admin/Dropbox/Jygdaal's Keep/Notes on Perlin Noise",
+		"/C/Users/admin/Dropbox/Jygdaal's Keep/string_utilities.h",
+		"/C/Users/admin/Dropbox/Jygdaal's Keep/string_utilities.c",
+		"/C/Users/admin/Dropbox/Jygdaal's Keep/input_output.h",
+		"/C/Users/admin/Dropbox/Jygdaal's Keep/input_output.c",
+		"/C/Users/admin/Dropbox/Jygdaal's Keep/game_map.h",
+		"/C/Users/admin/Dropbox/Jygdaal's Keep/game_map.c",
+		"/C/Users/admin/Dropbox/Jygdaal's Keep/string_utilities.cpp",
+		"/C/Users/admin/Dropbox/Jygdaal's Keep/input_output.cpp",
+		"/C/Users/admin/Dropbox/Jygdaal's Keep/game_map.cpp",
+		"/C/Users/admin/Dropbox/Jygdaal's Keep/main.cpp",
+		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/Jygdaal's Keep/main.cpp",
+		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/Jygdaal's Keep/string_utilities.h",
+		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/Jygdaal's Keep/input_output.h",
+		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/Jygdaal's Keep/input_output.cpp",
+		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/Jygdaal's Keep/game_map.h",
+		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/Jygdaal's Keep/game_map.cpp",
+		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/Jygdaal's Keep/main.h",
+		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/Jygdaal's Keep/string_utilities.cpp",
+		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/Jygdaal's Keep/datautil.h",
+		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/Jygdaal's Keep/datautil.cpp",
+		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/Jygdaal's Keep/flowlogic.h",
+		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/Jygdaal's Keep/flowlogic.cpp",
+		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/Jygdaal's Keep/gamemap.h",
+		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/Jygdaal's Keep/gamemap.cpp",
+		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/Jygdaal's Keep/mapconstants.h",
+		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/Jygdaal's Keep/build.bat",
+		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/build.bat",
+		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/winmain.cpp",
+		"/C/Users/admin/Downloads/FP223B3X13005852_20160527.conf",
+		"/C/Users/admin/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/admin/AppData/Roaming/Sublime Text 3/Packages/User/winmain project.sublime-build",
+		"/C/Users/admin/Dropbox/Alpha/textadventure.cpp",
+		"/C/Users/admin/AppData/Roaming/Sublime Text 3/Packages/User/orgmode.sublime-settings",
+		"/C/Users/admin/Desktop/HTSFGP200D_20160513_1618.conf",
+		"/C/Users/admin/Google Drive/Security Documents/PCI requirements",
+		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/atm.h",
+		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/atm.cpp",
+		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/Source.cpp",
+		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/test high number catching.cpp",
+		"/C/Users/admin/Dropbox/Alpha/Project Funtiem notes",
+		"/C/Users/admin/Dropbox/Alpha/Concepts to Research",
+		"/C/Users/admin/Desktop/HTSFGP200D_20160511_1414.conf",
+		"/C/VulkanSDK/1.0.11.1/Include/vulkan/vulkan.h",
+		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/Source.h",
+		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/hw.cpp",
+		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/hw4.cpp",
+		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/hw5.cpp",
+		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/ATM map",
+		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/hw3.cpp",
+		"/C/Users/admin/Dropbox/ProjectAlf/build.bat",
+		"/C/Users/admin/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/hw2.cpp",
+		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/win32_handmade_006.cpp",
+		"/C/Users/admin/Dropbox/Programming/Tutorials/Handmade Hero/handmade_hero_010_source/handmade_hero_day_006_source/code/win32_handmade.cpp"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Entityflag_simming",
+			"extern",
+			"mainwindo",
+			"Running",
+			"\t\t",
+			"Running",
+			"tree ",
+			"tree",
+			"person",
+			"render",
+			"getlisten",
+			"getlistener",
+			"printmapstats",
+			"getMapStats",
+			"gridpoint",
+			"setTileType",
+			"Tiletype",
+			"setTilety",
+			"puts(rand()",
+			"settiletype",
+			"system",
+			"rand",
+			"printenvironm",
+			"long",
+			"getgridpointposition",
+			"strncpy",
+			"validateString",
+			"5726",
+			"1024",
+			"2048",
+			"rotationaxis",
+			"getcontext",
+			"shaderProjectionMatrixUniform",
+			"projectionMatrix",
+			"findprey",
+			"makeeater",
+			"beginpath",
+			"path.join",
+			"path + \"\\\\\" + files[f]",
+			"stat",
+			");\n",
+			"vertexPos",
+			"vertexPos ",
+			"vertexPos",
+			");\n",
+			"rendero",
+			"render()",
+			"render(",
+			"render()",
+			"renderObject",
+			"render",
+			"draw",
+			"slowspeed",
+			"cameraspeed",
+			"camera",
+			"cameraspeed",
+			"cameraSpeed",
+			"$.graphics.world.cameraSpeed",
+			"cameraspeed",
+			"worldfocuscoord",
+			"runningtest",
+			"cameraSpeed",
+			"cameraspeed",
+			"$.element.width",
+			"document.width",
+			"canvas.width",
+			"updateborders",
+			"findmapproperties",
+			"graphics.hud.draw",
+			"animate",
+			"objects.animate",
+			"objects",
+			"graphics.objects",
+			"togglegrid",
+			"if($.graphics.hu",
+			"hud",
+			"All",
+			"draw",
+			"$.graphics",
+			"draw",
+			"type",
+			"graphics",
+			"populateCoordinates",
+			"offsetx",
+			"width",
+			"math.ran",
+			"shiftdown",
+			"shift",
+			"populatecoordinates",
+			"first topgridcoord",
+			"hud",
+			"getmapstats",
+			"mapstats",
+			"label",
+			"size",
+			"movetoneighbor",
+			"compare",
+			" comp(",
+			" cmp(",
+			"strupr",
+			"()",
+			"printPosition",
+			"printposition",
+			"go south",
+			"player position",
+			"setgrid",
+			"player.POSITION",
+			"neighborArray",
+			"gMap",
+			"MAP_HEIGHT",
+			"MAP_LENGTH",
+			"MAP_WIDTH",
+			"gridpoint",
+			".\n",
+			"malloc",
+			"gamemap",
+			"generateMap",
+			"struct",
+			"myGameMap",
+			".name",
+			"  \n",
+			"input",
+			"oldInput",
+			"bool ",
+			"defwindowproc",
+			"xinput",
+			"bool ",
+			"win32fill"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"bool32 "
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "maintest.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4970,
+						"regions":
+						{
+							"mark":
+							{
+								"flags": 144,
+								"icon": "dot",
+								"regions":
+								[
+									[
+										48,
+										48
+									]
+								],
+								"scope": "mark"
+							}
+						},
+						"selection":
+						[
+							[
+								3104,
+								3104
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1350.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "architecturalbrainstorm.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 546,
+						"regions":
+						{
+							"mark":
+							{
+								"flags": 144,
+								"icon": "dot",
+								"regions":
+								[
+									[
+										424,
+										424
+									]
+								],
+								"scope": "mark"
+							}
+						},
+						"selection":
+						[
+							[
+								546,
+								546
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 238.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/winmain project.sublime-build",
+	"project": "game0.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

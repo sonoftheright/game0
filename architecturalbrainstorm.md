@@ -15,8 +15,6 @@ Entity data (Variable data only?)
 Behavior data
 	Action modules
 		Pathfinding
-		Entity database searching
+		Entity database searching/Entity knowledge
 Asset data
 	Animation data
-
-
