@@ -7,9 +7,9 @@
  - Systems Programming
  	- Map
  		- Test
- 			- Limited
- 			- Looping (torus)
- 			- Random
+ 			- Types
+ 				- Limited Style
+ 				- Looping (torus)
  	- Entities
  		- Entity data
  			- Entity knowledge
@@ -20,6 +20,9 @@
  			- Entity-map interaction
  		- Entity behavior
  		- Job/task management
+ 	- Object Tracking/Database System
+ 		- R tree structure
+ 			- Segments have
  - Systems Testing
  	- Debug interfaces
  - Engine tools

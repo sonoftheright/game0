@@ -27,4 +27,4 @@ Given the above, my goal is not just to create a game or a simulation: my goal i
 
 But this is getting way, way ahead of ourselves. To see the current status of the project, check out my todo.md file. To see what's planned for the future, read farther down on the todo.md file. If you're curious as to what my current random engine architecture brainstorms are looking like, check out the architecturalbrainstorm.md file.
 
-The current state of the project is tiny compared to my hopes and dreams for it, but, will and are moving forward. Given time, things will begin taking a more definite form.
+The current state of the project is tiny compared to my hopes and dreams for it, but we will and are moving forward. Given time, things will begin taking a more definite form.
