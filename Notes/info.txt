@@ -1,15 +1,30 @@
 /* Information */
 
-Files in this folder:
+# Project Team #
 
-	- build.bat
-		- Batch file meant to be run in Windows. Requirements:
-			- Windows. (duh)
-			- Visual Studio (for the compiler - 'cl' - and the reference thing - 'vcvars32')
+Admin and Creator: Benjamin Marquardt
+
+# Files and Folders #
+
++ ./Unused Files for Future Use
 	- maintest.cpp
-		- the code!
-	- maintest.exe
-		- the compiled program
-	- maintest.obj
-		- File created by the compiler while linking? Probably because I needed to include gdi32.lib and user32.lib because those are required apparently for Windows to like my program.
-		- File created by the compiler while linking? Probably because I needed to include gdi32.lib and user32.lib because those are required apparently for Windows to like my program.
+		- testing Windows platform Window creation, message ahndling
+	- maintest.exe, maintest.obj
+		- the compiled program and its linker .obj file.
++ ./Debug
++ ./Visual Studio Files
++ ./Notes
++ ./
+	- build-systemstest.bat
+		- build batch file for systemstest 
+			- requires Windows, Visual Studio, and VS's folders included in environment variables.
+			- compiles in optimization mode so that you can get some blinding speed 
+	- game0.sublime-project, ---.sublime-workspace
+		- Sublime Text 3 project files for my convenience (and yours, if you like ST3)
+	- README.md
+		- The project readme. Basic stuff. 
+	- systemstest.cpp, ---.h
+		- these are project files for testing game engine systems such as the game map, procedural map generation, entity simulation, behavioral simulation, pathfinding, basic AI, object manipulation, etc. etc. etc. without having to worry about graphics or extensively rigorous engine requirements.
+	- systemstest.exe, ---.obj
+		- compilation files/executable. Should be run from command line (Win+R, cmd)
+		 
