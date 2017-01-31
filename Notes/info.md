@@ -16,7 +16,7 @@ Admin and Creator: Benjamin Marquardt
 	####- README.md####
 		- The project readme. Basic stuff. 
 	####- systemstest.cpp, ---.h####
-		- these are project files for testing game engine systems such as the game map, procedural map generation, entity simulation, behavioral simulation, pathfinding, basic AI, object manipulation, etc. etc. etc. without having to worry about graphics or extensively rigorous engine requirements.
+		- these are project files for testing game engine systems without having to worry about graphics or extensively rigorous engine requirements.
 	####- systemstest.exe, ---.obj####
 		- compilation files/executable. Should be run from command line (Win+R, cmd)
 ###+./Unused Files for Future Use###
