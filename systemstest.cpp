@@ -2,7 +2,7 @@
 * @Author: Benjamin Marquardt
 * @Date:   2017-01-26 13:19:23
 * @Last Modified by:   Benjamin Marquardt
-* @Last Modified time: 2017-01-31 08:35:03
+* @Last Modified time: 2017-01-31 10:15:32
 */
 
 #include <stdlib.h>
@@ -14,10 +14,10 @@
 #include "systemstest.h"
 //$IO
 void
-printMapAtPos(POS *p) 
-{ 
-	printf("This will only print point data... x: %.1f y: %.1f z: %.1f\n", 
-			p->X, p->Y, p->Z); 
+printMapAtPos(POS *p)
+{
+	printf("This will only print point data... x: %.1f y: %.1f z: %.1f\n",
+			p->X, p->Y, p->Z);
 }
 
 //$MAP
@@ -42,7 +42,7 @@ MoveMapFocus(DIRECTION d)
 
 //$MAIN
 int main(int argc, char *args[]){
-	if(argc > 1) 
+	if(argc > 1)
 	{
 		srand((unsigned) std::stoi(args[1])); //take the first argument as seed
 	}
@@ -50,8 +50,8 @@ int main(int argc, char *args[]){
 		srand(WORLD_SEED);
 
  	MAP_BUFFER *_mP = (MAP_BUFFER *)malloc(sizeof(MAP_BUFFER));
- 	int w = MAP_BUFFER_WIDTH * CHUNK_SIDE_SIZE, 
- 		h = MAP_BUFFER_HEIGHT * CHUNK_SIDE_SIZE, 
+ 	int w = MAP_BUFFER_WIDTH * CHUNK_SIDE_SIZE,
+ 		h = MAP_BUFFER_HEIGHT * CHUNK_SIDE_SIZE,
  		d = MAP_BUFFER_DEPTH * CHUNK_SIDE_SIZE;
 
  	clock_t t;
@@ -71,8 +71,8 @@ int main(int argc, char *args[]){
  	t = clock() - t;
  	double time_taken = ((double) t)/CLOCKS_PER_SEC;
  	printf("Map population took: %.10f seconds.\n", time_taken);
-	int x = rand() % w; 
-	int y = rand() % h; 
+	int x = rand() % w;
+	int y = rand() % h;
 	int z = rand() % d;
 	printMapAtPos(&_mP->GRID[x][y][z]);
  	printMapAtPos(&_mP->GRID[0][23][56]);
