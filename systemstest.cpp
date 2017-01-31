@@ -2,7 +2,7 @@
 * @Author: Benjamin Marquardt
 * @Date:   2017-01-26 13:19:23
 * @Last Modified by:   Benjamin Marquardt
-* @Last Modified time: 2017-01-31 10:15:32
+* @Last Modified time: 2017-01-31 17:42:07
 */
 
 #include <stdlib.h>
@@ -12,6 +12,7 @@
 #include <iostream>
 #include <string>
 #include "systemstest.h"
+
 //$IO
 void
 printMapAtPos(POS *p)
@@ -71,13 +72,22 @@ int main(int argc, char *args[]){
  	t = clock() - t;
  	double time_taken = ((double) t)/CLOCKS_PER_SEC;
  	printf("Map population took: %.10f seconds.\n", time_taken);
-	int x = rand() % w;
-	int y = rand() % h;
-	int z = rand() % d;
+	int x = rand() % w, y = rand() % h, z = rand() % d;
 	printMapAtPos(&_mP->GRID[x][y][z]);
  	printMapAtPos(&_mP->GRID[0][23][56]);
+ 	ENTITY_PROPERTIES Player;
+ 	Player.P = &_mP->GRID[120][60][15];
+ 	Player.X_POSITION = 124.5f;
+ 	Player.Y_POSITION = 60.5f;
+ 	Player.Z_POSITION = 15.5f;
+ 	OBJECT_FLAGS APPLE; OBJECT_FLAGS ORANGE;
+ 	Player.OBJECTS = APPLE & ORANGE;
+ 	Player.EQUIPPED = CLOTHES_MEAGER & LAMP;
+ 	printf("Player inventory from binary shifts: %d\n", Player.OBJECTS);
+ 	printf("Player equipped items from binary shifts: %d\n", Player.EQUIPPED);
  	printf("Size of map: %f\n", (double) sizeof(*_mP));
  	printf("Size of POS: %f\n", (double) sizeof(POS));
+ 	printf("Size of PLAYER_PROPERTIES: %f\n", (double) sizeof(PLAYER_PROPERTIES));
  	printf("Size of POS_PROPERTIES: %f\n", (double) sizeof(POS_PROPERTIES));
 
 	system("PAUSE");

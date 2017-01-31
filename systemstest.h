@@ -51,7 +51,7 @@ typedef enum EQUIPPABLE_OBJECTS
 
 typedef struct POS_PROPERTIES
 {
-	MATERIAL mat;
+	MATERIAL MATERIAL;
 	void * OBJECTS[16];
 	bool EMPTY;
 	bool WALKABLE;
@@ -80,10 +80,17 @@ typedef struct MAP_PROPERTIES
 	POS *Z_ORIGIN;
 } MAP_PROPS;
 
-typedef struct PLAYER_PROPERTIES
+typedef struct ENTITY_PROPERTIES
 {
+	POS *P_EDGE[8]; // NW, N, NE, W, E, SW, S, SE
 	POS *P;
-
+	int OBJECTS;
+	int EQUIPPED;
+	int STATUS;
+	float HEALTH;
+	float X_POSITION;
+	float Y_POSITION;
+	float Z_POSITION;
 } PLAYER_PROPERTIES;
 
 void MoveMapFocus(DIRECTION);
