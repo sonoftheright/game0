@@ -8,10 +8,7 @@
 		- Types
 			- Infinite/Proc Gen
 				- Seeds
-				- Tiletype gradients
-					- only plains surround desert
-					- jungle, forest, or tundra surround plains
-					- 
+					- Basic infinite mapgen
 ## PLANNED ##
  - Systems Programming
  	- Map
