@@ -6,15 +6,7 @@ Admin and Creator: Benjamin Marquardt
 
 # Files and Folders #
 
-+ ./Unused Files for Future Use
-	- maintest.cpp
-		- testing Windows platform Window creation, message ahndling
-	- maintest.exe, maintest.obj
-		- the compiled program and its linker .obj file.
-+ ./Debug
-+ ./Visual Studio Files
-+ ./Notes
-+ ./
+###+ ./###
 	- build-systemstest.bat
 		- build batch file for systemstest 
 			- requires Windows, Visual Studio, and VS's folders included in environment variables.
@@ -27,4 +19,14 @@ Admin and Creator: Benjamin Marquardt
 		- these are project files for testing game engine systems such as the game map, procedural map generation, entity simulation, behavioral simulation, pathfinding, basic AI, object manipulation, etc. etc. etc. without having to worry about graphics or extensively rigorous engine requirements.
 	- systemstest.exe, ---.obj
 		- compilation files/executable. Should be run from command line (Win+R, cmd)
-		 
+###+./Unused Files for Future Use###
+	- maintest.cpp
+		- testing Windows platform Window creation, message ahndling
+	- maintest.exe, maintest.obj
+		- the compiled program and its linker .obj file.
+###+./Debug###
+	- Used for VS
+###+./Visual Studio Files###
+	- Visual Studio files for heavy debugging
+###+./Notes###
+	- A place for notes on the project, both internal and outfacing
