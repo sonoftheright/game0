@@ -3,6 +3,15 @@
 
 ## IN DEVELOPMENT ##
 
+- Map
+	- Test
+		- Types
+			- Infinite/Proc Gen
+				- Seeds
+				- Tiletype gradients
+					- only plains surround desert
+					- jungle, forest, or tundra surround plains
+					- 
 ## PLANNED ##
  - Systems Programming
  	- Map
@@ -10,6 +19,8 @@
  			- Types
  				- Limited Style
  				- Looping (torus)
+ 				- Infinite/Proc Gen***
+ 					- 
  	- Entities
  		- Entity data
  			- Entity knowledge

@@ -8,6 +8,7 @@
 #define MAP_BUFFER_WIDTH 	64
 #define MAP_BUFFER_HEIGHT	32
 #define MAP_BUFFER_DEPTH 	16
+#define WORLD_SEED 			3158582976
 
 typedef enum DIRECTION
 {
@@ -31,6 +32,22 @@ typedef enum MATERIAL
 	LINOLEUM
 
 } GROUND_MATERIAL;
+
+typedef enum OBJECT_FLAGS
+{
+	APPLE		= 1 << 0,
+	ORANGE		= 1 << 1
+}
+
+typedef enum EQUIPPABLE_OBJECTS
+{
+	SWORD 			= 1 << 0,
+	LAMP  			= 1 << 1,
+	CLOTHES_MEAGER	= 1 << 2,
+	CLOTHES_FINE 	= 1 << 3,
+	ARMOR_MEAGER	= 1 << 4,
+	ARMOR_FINE		= 1 << 5	
+}
 
 typedef struct POS_PROPERTIES
 {
@@ -62,5 +79,11 @@ typedef struct MAP_PROPERTIES
 	POS *Y_ORIGIN;
 	POS *Z_ORIGIN;
 } MAP_PROPS;
+
+typedef struct PLAYER_PROPERTIES
+{
+	POS *P;
+
+}
 
 void MoveMapFocus(DIRECTION);

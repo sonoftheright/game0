@@ -2,13 +2,15 @@
 * @Author: Benjamin Marquardt
 * @Date:   2017-01-26 13:19:23
 * @Last Modified by:   Benjamin Marquardt
-* @Last Modified time: 2017-01-30 15:46:50
+* @Last Modified time: 2017-01-31 08:35:03
 */
 
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
 #include <time.h>
+#include <iostream>
+#include <string>
 #include "systemstest.h"
 //$IO
 void
@@ -39,7 +41,14 @@ MoveMapFocus(DIRECTION d)
 }
 
 //$MAIN
-int main(){
+int main(int argc, char *args[]){
+	if(argc > 1) 
+	{
+		srand((unsigned) std::stoi(args[1])); //take the first argument as seed
+	}
+	else
+		srand(WORLD_SEED);
+
  	MAP_BUFFER *_mP = (MAP_BUFFER *)malloc(sizeof(MAP_BUFFER));
  	int w = MAP_BUFFER_WIDTH * CHUNK_SIDE_SIZE, 
  		h = MAP_BUFFER_HEIGHT * CHUNK_SIDE_SIZE, 
@@ -62,8 +71,6 @@ int main(){
  	t = clock() - t;
  	double time_taken = ((double) t)/CLOCKS_PER_SEC;
  	printf("Map population took: %.10f seconds.\n", time_taken);
- 	time_t tm;
-	srand((unsigned) time(&tm) * 1000);
 	int x = rand() % w; 
 	int y = rand() % h; 
 	int z = rand() % d;
