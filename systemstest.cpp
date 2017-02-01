@@ -2,7 +2,7 @@
 * @Author: Benjamin Marquardt
 * @Date:   2017-01-26 13:19:23
 * @Last Modified by:   Benjamin Marquardt
-* @Last Modified time: 2017-01-31 17:42:07
+* @Last Modified time: 2017-02-01 10:56:01
 */
 
 #include <stdlib.h>
@@ -45,7 +45,18 @@ MoveMapFocus(DIRECTION d)
 int main(int argc, char *args[]){
 	if(argc > 1)
 	{
-		srand((unsigned) std::stoi(args[1])); //take the first argument as seed
+		double result = 0;
+		int ascii, length = 0;
+		char * argument = args[1];
+		while(argument[length] != 0x00)
+		{
+			ascii = (int) argument[length];
+			result += (double) ascii;
+			length++;
+		}
+		printf("Custom seed: %.0f\n", result);
+
+		srand(result); //take the first argument as seed
 	}
 	else
 		srand(WORLD_SEED);
@@ -80,8 +91,8 @@ int main(int argc, char *args[]){
  	Player.X_POSITION = 124.5f;
  	Player.Y_POSITION = 60.5f;
  	Player.Z_POSITION = 15.5f;
- 	OBJECT_FLAGS APPLE; OBJECT_FLAGS ORANGE;
- 	Player.OBJECTS = APPLE & ORANGE;
+ 	OBJECT_FLAGS A = APPLE, O = ORANGE;
+ 	Player.OBJECTS &= A & O;
  	Player.EQUIPPED = CLOTHES_MEAGER & LAMP;
  	printf("Player inventory from binary shifts: %d\n", Player.OBJECTS);
  	printf("Player equipped items from binary shifts: %d\n", Player.EQUIPPED);

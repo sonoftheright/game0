@@ -99,12 +99,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="systemstest.cpp" />
-    <ClCompile Include="systemstestio.cpp" />
+    <ClCompile Include="..\systemstest.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="systemstest.h" />
-    <ClInclude Include="systemstestio.h" />
+    <ClInclude Include="..\systemstest.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

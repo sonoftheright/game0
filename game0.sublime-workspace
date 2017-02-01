@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"OBJE",
+				"OBJECT_FLAGS"
+			],
+			[
 				"init",
 				"initViewport"
 			],
@@ -139,25 +143,8 @@
 			"file": "systemstest.cpp",
 			"settings":
 			{
-				"buffer_size": 2500,
+				"buffer_size": 2769,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "systemstest.h",
-			"settings":
-			{
-				"buffer_size": 1781,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Notes/architecturalbrainstorm.md",
-			"settings":
-			{
-				"buffer_size": 561,
 				"line_ending": "Windows"
 			}
 		},
@@ -171,19 +158,10 @@
 			}
 		},
 		{
-			"file": "README.md",
+			"file": "systemstest.h",
 			"settings":
 			{
-				"buffer_size": 4847,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Notes/todo.md",
-			"settings":
-			{
-				"buffer_size": 849,
+				"buffer_size": 1781,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -212,7 +190,7 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 104.0,
+		"height": 127.0,
 		"last_filter": "install",
 		"selected_items":
 		[
@@ -251,25 +229,23 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/admin/Dropbox/game0",
-		"/C/Users/admin/Dropbox/game0/Debug",
-		"/C/Users/admin/Dropbox/game0/Notes",
-		"/C/Users/admin/Dropbox/game0/Unused Files for Future Use",
-		"/C/Users/admin/Dropbox/game0/Visual Studio Files"
+		"/C/Users/Bookstore.RECEIVINGROOM/Downloads/Other/Prog/Practice/game0",
+		"/C/Users/Bookstore.RECEIVINGROOM/Downloads/Other/Prog/Practice/game0/Visual Studio Files"
 	],
 	"file_history":
 	[
-		"/C/cygwin64/Cygwin.bat",
-		"/C/Users/admin/Dropbox/game0/Notes/info.md",
-		"/C/Users/admin/Dropbox/game0/todo.md",
-		"/C/Users/admin/Dropbox/game0/architecturalbrainstorm.md",
-		"/B/Dropbox/Jygdaal's Keep/main.h",
-		"/B/Dropbox/Jygdaal's Keep/main.c",
+		"/C/Users/Bookstore.RECEIVINGROOM/Downloads/Other/Prog/Jygdaal's Keep/main.cpp",
+		"/C/Users/Bookstore.RECEIVINGROOM/Downloads/Other/Prog/Practice/game0/systemstestio.h",
+		"/C/Users/Bookstore.RECEIVINGROOM/Downloads/Other/Prog/Practice/game0/systemstestio.cpp",
+		"/C/Users/Bookstore.RECEIVINGROOM/Downloads/Other/Prog/Practice/game0/architecturalbrainstorm.md",
+		"/C/Users/Bookstore.RECEIVINGROOM/AppData/Roaming/Sublime Text 3/Packages/FileHeader/FileHeader.sublime-settings",
+		"/C/Users/Bookstore.RECEIVINGROOM/Downloads/Other/Prog/Practice/game0/systemstest.h",
 		"/C/Users/admin/Dropbox/Programming/Tutorials/Handmade Hero/handmade_hero_251_source/handmade_hero_day_251_source/code/handmade.cpp",
 		"/C/Users/admin/AppData/Roaming/Sublime Text 3/Packages/User/FileHeader.sublime-settings",
 		"/C/Users/admin/Dropbox/game0/systemstest.h",
 		"/C/Users/admin/Dropbox/game0/systemstest.cpp",
 		"/C/Users/admin/Dropbox/realterm commands.mdown",
+		"/C/Users/admin/Dropbox/game0/architecturalbrainstorm.md",
 		"/C/Users/admin/Dropbox/game0/maintest-winplatform.cpp",
 		"/C/Users/admin/Dropbox/game0/maintest-winplatform.h",
 		"/C/Users/admin/Dropbox/game0/maintest.cpp",
@@ -385,8 +361,7 @@
 		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/atm.h",
 		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/atm.cpp",
 		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/Source.cpp",
-		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/test high number catching.cpp",
-		"/C/Users/admin/Dropbox/Alpha/Project Funtiem notes"
+		"/C/Users/admin/Dropbox/ProjectAlf/Serious Code/test high number catching.cpp"
 	],
 	"find":
 	{
@@ -405,8 +380,6 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"objects",
-			"Y",
 			"enum NUMBERS",
 			"Entityflag_simming",
 			"extern",
@@ -532,7 +505,9 @@
 			"input",
 			"oldInput",
 			"bool ",
-			"defwindowproc"
+			"defwindowproc",
+			"xinput",
+			"bool "
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -560,15 +535,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2500,
+						"buffer_size": 2769,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1515,
-								1515
+								1136,
+								1136
 							]
 						],
 						"settings":
@@ -580,15 +555,15 @@
 								{
 									"1":
 									[
-										1515,
-										1516
+										1136,
+										1137
 									]
 								},
 								"icon":
 								{
 									"1":
 									[
-										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"Packages/BracketHighlighter/icons/double_quote.png",
 										"brackethighlighter.default"
 									]
 								},
@@ -596,8 +571,8 @@
 								{
 									"1":
 									[
-										1370,
-										1371
+										1101,
+										1102
 									]
 								},
 								"unmatched":
@@ -606,26 +581,11 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
@@ -636,31 +596,46 @@
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
-								"bh_round_content"
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
 							],
 							"c_time":
 							[
@@ -709,11 +684,10 @@
 								3,
 								46
 							],
-							"syntax": "Packages/C++/C++.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/C++/C++.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 585.0,
+						"translation.y": 360.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -721,6 +695,156 @@
 				},
 				{
 					"buffer": 1,
+					"file": "build-systemstest.bat",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 89,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"c_time":
+							[
+								128,
+								3,
+								99,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								113,
+								0,
+								67,
+								10,
+								7,
+								225,
+								1,
+								31,
+								10,
+								18,
+								32,
+								6,
+								68,
+								130,
+								113,
+								1,
+								133,
+								113,
+								2,
+								82,
+								113,
+								3,
+								46
+							],
+							"syntax": "Packages/Batch File/Batch File.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
 					"file": "systemstest.h",
 					"semi_transient": false,
 					"settings":
@@ -732,8 +856,8 @@
 						"selection":
 						[
 							[
-								975,
-								975
+								0,
+								0
 							]
 						],
 						"settings":
@@ -756,56 +880,56 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
@@ -842,107 +966,12 @@
 								7,
 								225,
 								1,
-								26,
-								13,
-								21,
-								6,
+								30,
+								10,
 								2,
-								45,
-								117,
-								113,
+								24,
 								1,
-								133,
-								113,
-								2,
-								82,
-								113,
-								3,
-								46
-							],
-							"syntax": "Packages/C++/C++.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 405.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 1,
-			"sheets":
-			[
-				{
-					"buffer": 2,
-					"file": "Notes/architecturalbrainstorm.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 561,
-						"regions":
-						{
-							"mark":
-							{
-								"flags": 144,
-								"icon": "dot",
-								"regions":
-								[
-									[
-										901,
-										901
-									]
-								],
-								"scope": "mark"
-							}
-						},
-						"selection":
-						[
-							[
-								221,
-								221
-							]
-						],
-						"settings":
-						{
-							"c_time":
-							[
-								128,
-								3,
-								99,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								113,
-								0,
-								67,
-								10,
-								7,
-								225,
-								1,
-								31,
-								12,
-								0,
-								8,
-								0,
-								132,
+								56,
 								86,
 								113,
 								1,
@@ -954,239 +983,13 @@
 								3,
 								46
 							],
-							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "build-systemstest.bat",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 89,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								89,
-								89
-							]
-						],
-						"settings":
-						{
-							"c_time":
-							[
-								128,
-								3,
-								99,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								113,
-								0,
-								67,
-								10,
-								7,
-								225,
-								1,
-								31,
-								12,
-								0,
-								8,
-								15,
-								20,
-								121,
-								113,
-								1,
-								133,
-								113,
-								2,
-								82,
-								113,
-								3,
-								46
-							],
-							"syntax": "Packages/Batch File/Batch File.sublime-syntax"
+							"syntax": "Packages/C++/C++.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "README.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4847,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2121,
-								2121
-							]
-						],
-						"settings":
-						{
-							"c_time":
-							[
-								128,
-								3,
-								99,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								113,
-								0,
-								67,
-								10,
-								7,
-								225,
-								1,
-								20,
-								9,
-								9,
-								37,
-								4,
-								0,
-								45,
-								113,
-								1,
-								133,
-								113,
-								2,
-								82,
-								113,
-								3,
-								46
-							],
-							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 255.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "Notes/todo.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 849,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								157,
-								157
-							]
-						],
-						"settings":
-						{
-							"c_time":
-							[
-								128,
-								3,
-								99,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								113,
-								0,
-								67,
-								10,
-								7,
-								225,
-								1,
-								31,
-								12,
-								0,
-								8,
-								0,
-								132,
-								86,
-								113,
-								1,
-								133,
-								113,
-								2,
-								82,
-								113,
-								3,
-								46
-							],
-							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -1209,18 +1012,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.601016949153,
 			1.0
 		],
 		"rows":
@@ -1272,7 +1068,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
@@ -1280,7 +1076,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 223.0,
+	"side_bar_width": 205.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
