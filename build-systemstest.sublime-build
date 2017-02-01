@@ -1,0 +1,5 @@
+{
+	"cmd": ["build-systemstest.bat"],
+	"working_dir": "$file_path",
+	"selector": "source.dosbatch"
+}

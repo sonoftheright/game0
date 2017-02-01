@@ -10,20 +10,20 @@
 #define MAP_BUFFER_DEPTH 	16
 #define WORLD_SEED 			3158582976
 
-typedef enum DIRECTION
+typedef enum 
 {
 	NORTH, NORTHWEST, WEST, SOUTHWEST,
 	SOUTH, SOUTHEAST, EAST, NORTHEAST,
 	UP, DOWN
 } DIRECTION;
 
-typedef enum CLIMBABLE_OBJECTS
+typedef enum 
 {
 	SHALLOWSTAIRS, STEEPSTAIRS, LADDER,
 	RAMP, ROPE, VERTICALCLIMB
 } CLIMBABLE_OBJECTS;
 
-typedef enum MATERIAL
+typedef enum 
 {
 	EMPTY, DIRT, SAND, PEBBLES, ROCK, GRASS,
 	SNOW, SALTWATER, FRESHWATER, ASPHALT, GRAVEL,
@@ -33,13 +33,13 @@ typedef enum MATERIAL
 
 } GROUND_MATERIAL;
 
-typedef enum OBJECT_FLAGS
+typedef enum 
 {
 	APPLE		= 1 << 0,
 	ORANGE		= 1 << 1
 } OBJECT_FLAGS;
 
-typedef enum EQUIPPABLE_OBJECTS
+typedef enum 
 {
 	SWORD 			= 1 << 0,
 	LAMP  			= 1 << 1,
@@ -49,16 +49,16 @@ typedef enum EQUIPPABLE_OBJECTS
 	ARMOR_FINE		= 1 << 5
 } EQUIPPABLE_OBJECTS;
 
-typedef struct POS_PROPERTIES
+typedef struct
 {
-	MATERIAL MATERIAL;
+	GROUND_MATERIAL MATERIAL;
 	void * OBJECTS[16];
 	bool EMPTY;
 	bool WALKABLE;
 	bool SKY;
 } POS_PROPERTIES;
 
-typedef struct POS
+typedef struct
 {
 	float X;
 	float Y;
@@ -66,7 +66,7 @@ typedef struct POS
 	POS_PROPERTIES *PROPS;
 } POS;
 
-typedef struct MAP_BUFFER
+typedef struct
 {
 	POS GRID[CHUNK_SIDE_SIZE * MAP_BUFFER_WIDTH]
 			[CHUNK_SIDE_SIZE * MAP_BUFFER_HEIGHT]
@@ -80,7 +80,7 @@ typedef struct MAP_PROPERTIES
 	POS *Z_ORIGIN;
 } MAP_PROPS;
 
-typedef struct ENTITY_PROPERTIES
+typedef struct
 {
 	POS *P_EDGE[8]; // NW, N, NE, W, E, SW, S, SE
 	POS *P;
