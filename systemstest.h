@@ -84,8 +84,8 @@ typedef struct ENTITY_PROPERTIES
 {
 	POS *P_EDGE[8]; // NW, N, NE, W, E, SW, S, SE
 	POS *P;
-	int OBJECTS;
-	int EQUIPPED;
+	unsigned int OBJECTS;
+	unsigned int EQUIPPED;
 	int STATUS;
 	float HEALTH;
 	float X_POSITION;

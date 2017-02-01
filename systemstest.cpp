@@ -2,7 +2,7 @@
 * @Author: Benjamin Marquardt
 * @Date:   2017-01-26 13:19:23
 * @Last Modified by:   Benjamin Marquardt
-* @Last Modified time: 2017-02-01 10:56:01
+* @Last Modified time: 2017-02-01 11:45:02
 */
 
 #include <stdlib.h>
@@ -91,11 +91,11 @@ int main(int argc, char *args[]){
  	Player.X_POSITION = 124.5f;
  	Player.Y_POSITION = 60.5f;
  	Player.Z_POSITION = 15.5f;
- 	OBJECT_FLAGS A = APPLE, O = ORANGE;
- 	Player.OBJECTS &= A & O;
- 	Player.EQUIPPED = CLOTHES_MEAGER & LAMP;
+ 	Player.OBJECTS = APPLE | ORANGE;
+ 	Player.EQUIPPED = CLOTHES_MEAGER | LAMP;
  	printf("Player inventory from binary shifts: %d\n", Player.OBJECTS);
  	printf("Player equipped items from binary shifts: %d\n", Player.EQUIPPED);
+ 	printf("Does player have a lamp? %d\n", (int) (Player.EQUIPPED & LAMP));
  	printf("Size of map: %f\n", (double) sizeof(*_mP));
  	printf("Size of POS: %f\n", (double) sizeof(POS));
  	printf("Size of PLAYER_PROPERTIES: %f\n", (double) sizeof(PLAYER_PROPERTIES));
