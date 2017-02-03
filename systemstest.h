@@ -4,11 +4,13 @@
 * @Last Modified by:   Benjamin Marquardt
 * @Last Modified time: 2017-01-30
 */
-#define CHUNK_SIDE_SIZE		4
-#define MAP_BUFFER_WIDTH 	64
-#define MAP_BUFFER_HEIGHT	32
+#define CHUNK_SIDE_SIZE		16
+#define MAP_BUFFER_WIDTH 	16
+#define MAP_BUFFER_HEIGHT	16
 #define MAP_BUFFER_DEPTH 	16
-#define WORLD_SEED 			3158582976
+#define DEFAULT_SEED		3158582976
+
+extern double SEED = DEFAULT_SEED;
 
 typedef enum 
 {
@@ -49,14 +51,24 @@ typedef enum
 	ARMOR_FINE		= 1 << 5
 } EQUIPPABLE_OBJECTS;
 
-typedef struct
-{
-	GROUND_MATERIAL MATERIAL;
-	void * OBJECTS[16];
-	bool EMPTY;
-	bool WALKABLE;
-	bool SKY;
-} POS_PROPERTIES;
+/*
+============
+tile pattern
+============
+[0] tracks temperature
+[1] tracks humidity
+[2] tracks soil nutrient depletion
++++ - jungle
+++- - swamp
++-- - desert
++-+ - prairie
+
+--- - frozen desert
+--+ - tundra
+-++ - frozen bog
+-+- - crystal forest
+*/
+typedef struct { unsigned char TEMP, HUM, SOIL, EXTRA; } POS_PROPERTIES;
 
 typedef struct
 {

@@ -2,7 +2,7 @@
 * @Author: Benjamin Marquardt
 * @Date:   2017-01-26 13:19:23
 * @Last Modified by:   Benjamin Marquardt
-* @Last Modified time: 2017-02-01 13:16:44
+* @Last Modified time: 2017-02-03 17:03:13
 */
 
 #include <stdlib.h>
@@ -12,6 +12,7 @@
 #include <iostream>
 #include <string>
 #include "systemstest.h"
+#include "perlin.cpp"
 
 //$IO
 void
@@ -70,16 +71,16 @@ int main(int argc, char *args[]){
 		}
 		printf("Custom seed: %.0f\n", result);
 
-		srand(result); //take the first argument as seed
+		SEED = result;
 	}
 	else
-		srand(WORLD_SEED);
-
+		SEED = DEFAULT_SEED;
  	MAP_BUFFER *_mP = (MAP_BUFFER *)malloc(sizeof(MAP_BUFFER));
+ 	memset(_mP, 0, sizeof(*_mP));
  	int w = MAP_BUFFER_WIDTH * CHUNK_SIDE_SIZE,
  		h = MAP_BUFFER_HEIGHT * CHUNK_SIDE_SIZE,
  		d = MAP_BUFFER_DEPTH * CHUNK_SIDE_SIZE;
-
+	if (_mP->GRID[0][0][0].X == NULL) { printf("Map is nulled.\n"); }
  	clock_t t;
  	t = clock();
  	for(int wit = 0; wit < w; wit++)
@@ -88,15 +89,17 @@ int main(int argc, char *args[]){
  		{
  			for(int dit = 0; dit < d; dit++)
  			{
+ 				srand(SEED);
 				_mP->GRID[wit][hit][dit].X = (float) wit;
  				_mP->GRID[wit][hit][dit].Y = (float) hit;
 				_mP->GRID[wit][hit][dit].Z = (float) dit;
  			}
  		}
  	}
+ 	initializePermutationArray(SEED);
  	t = clock() - t;
  	double time_taken = ((double) t)/CLOCKS_PER_SEC;
- 	printf("Map population took: %.10f seconds.\n", time_taken);
+ 	printf("Map population took: %.5f seconds.\n", time_taken);
 	int x = rand() % w, y = rand() % h, z = rand() % d;
 	printMapAtPos(&_mP->GRID[x][y][z]);
  	printMapAtPos(&_mP->GRID[0][23][56]);
