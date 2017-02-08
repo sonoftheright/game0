@@ -2,7 +2,7 @@
 * @Author: Benjamin Marquardt
 * @Date:   2017-01-26 13:19:23
 * @Last Modified by:   Benjamin Marquardt
-* @Last Modified time: 2017-02-03 17:03:13
+* @Last Modified time: 2017-02-08 14:44:24
 */
 
 #include <stdlib.h>
@@ -56,22 +56,30 @@ MoveMapFocus(DIRECTION d)
 	}
 }
 
+void setSeed(char * argument)
+{
+	double result = 0;
+	int ascii, length = 0;
+	while(argument[length] != 0x00)
+	{
+		// current digit is in ones place, so shift things over.
+		result *= 10;
+		// check to see if the entry is a number; in which case, use the number
+		if(argument[length] > 47 && argument[length] < 58)
+			result += (double) argument[length] - 48;
+		else
+			result += (double) argument[length];
+		length++;
+	}
+	SEED = result;
+	printf("Using SEED: %.0f\n", SEED);
+}
+
 //$MAIN
 int main(int argc, char *args[]){
 	if(argc > 1)
 	{
-		double result = 0;
-		int ascii, length = 0;
-		char * argument = args[1];
-		while(argument[length] != 0x00)
-		{
-			ascii = (int) argument[length];
-			result += (double) ascii;
-			length++;
-		}
-		printf("Custom seed: %.0f\n", result);
-
-		SEED = result;
+		setSeed(args[1]);
 	}
 	else
 		SEED = DEFAULT_SEED;
@@ -80,7 +88,6 @@ int main(int argc, char *args[]){
  	int w = MAP_BUFFER_WIDTH * CHUNK_SIDE_SIZE,
  		h = MAP_BUFFER_HEIGHT * CHUNK_SIDE_SIZE,
  		d = MAP_BUFFER_DEPTH * CHUNK_SIDE_SIZE;
-	if (_mP->GRID[0][0][0].X == NULL) { printf("Map is nulled.\n"); }
  	clock_t t;
  	t = clock();
  	for(int wit = 0; wit < w; wit++)
@@ -90,9 +97,9 @@ int main(int argc, char *args[]){
  			for(int dit = 0; dit < d; dit++)
  			{
  				srand(SEED);
-				_mP->GRID[wit][hit][dit].X = (float) wit;
- 				_mP->GRID[wit][hit][dit].Y = (float) hit;
-				_mP->GRID[wit][hit][dit].Z = (float) dit;
+				_mP->GRID[wit][hit][dit].X = (float) wit; //width iterator
+ 				_mP->GRID[wit][hit][dit].Y = (float) hit; //height iterator
+				_mP->GRID[wit][hit][dit].Z = (float) dit; //depth iterator
  			}
  		}
  	}
@@ -111,10 +118,7 @@ int main(int argc, char *args[]){
  	Player.OBJECTS = APPLE | ORANGE;
  	Player.EQUIPPED = CLOTHES_MEAGER | LAMP;
 
- 	printf("Size of map: %f\n", (double) sizeof(*_mP));
- 	printf("Size of POS: %f\n", (double) sizeof(POS));
- 	printf("Size of PLAYER_PROPERTIES: %f\n", (double) sizeof(PLAYER_PROPERTIES));
- 	printf("Size of POS_PROPERTIES: %f\n", (double) sizeof(POS_PROPERTIES));
+ 	printf("Size of map in bytes: %f\n", (double) sizeof(*_mP));
 
 	system("PAUSE");
 	return 0;
