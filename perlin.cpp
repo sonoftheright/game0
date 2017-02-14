@@ -2,7 +2,7 @@
 
 int permutationArray[255] = {0};
 
-void * shuffleIntArray(int length, int *array)
+void shuffleIntArray(int length, int *array)
 {
 	int random, temp, i = 0;
 
@@ -14,7 +14,6 @@ void * shuffleIntArray(int length, int *array)
 		array[length] = temp;
 	}
 	printf("First argument is %d, Second argument is %d\n", array[0], array[1]);
-	return array;
 }
 
 void initializePermutationArray(int seedArgument)
