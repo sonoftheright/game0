@@ -12,20 +12,20 @@
 
 extern double SEED = DEFAULT_SEED;
 
-typedef enum 
+typedef enum
 {
 	NORTH, NORTHWEST, WEST, SOUTHWEST,
 	SOUTH, SOUTHEAST, EAST, NORTHEAST,
 	UP, DOWN
 } DIRECTION;
 
-typedef enum 
+typedef enum
 {
 	SHALLOWSTAIRS, STEEPSTAIRS, LADDER,
 	RAMP, ROPE, VERTICALCLIMB
 } CLIMBABLE_OBJECTS;
 
-typedef enum 
+typedef enum
 {
 	EMPTY, DIRT, SAND, PEBBLES, ROCK, GRASS,
 	SNOW, SALTWATER, FRESHWATER, ASPHALT, GRAVEL,
@@ -35,13 +35,13 @@ typedef enum
 
 } GROUND_MATERIAL;
 
-typedef enum 
+typedef enum
 {
 	APPLE		= 1 << 0,
 	ORANGE		= 1 << 1
 } OBJECT_FLAGS;
 
-typedef enum 
+typedef enum
 {
 	SWORD 			= 1 << 0,
 	LAMP  			= 1 << 1,

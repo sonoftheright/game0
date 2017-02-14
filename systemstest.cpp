@@ -2,7 +2,7 @@
 * @Author: Benjamin Marquardt
 * @Date:   2017-01-26 13:19:23
 * @Last Modified by:   Benjamin Marquardt
-* @Last Modified time: 2017-02-08 14:44:24
+* @Last Modified time: 2017-02-14 10:44:35
 */
 
 #include <stdlib.h>
@@ -77,17 +77,16 @@ void setSeed(char * argument)
 
 //$MAIN
 int main(int argc, char *args[]){
-	if(argc > 1)
-	{
-		setSeed(args[1]);
-	}
+	if(argc > 1) { setSeed(args[1]); }
 	else
 		SEED = DEFAULT_SEED;
+ 	printf("Allocating memory for map.\n");
  	MAP_BUFFER *_mP = (MAP_BUFFER *)malloc(sizeof(MAP_BUFFER));
  	memset(_mP, 0, sizeof(*_mP));
  	int w = MAP_BUFFER_WIDTH * CHUNK_SIDE_SIZE,
  		h = MAP_BUFFER_HEIGHT * CHUNK_SIDE_SIZE,
  		d = MAP_BUFFER_DEPTH * CHUNK_SIDE_SIZE;
+	printf("Populating map.\n");
  	clock_t t;
  	t = clock();
  	for(int wit = 0; wit < w; wit++)
@@ -103,6 +102,7 @@ int main(int argc, char *args[]){
  			}
  		}
  	}
+ 	printf("Initializing permutation array.\n");
  	initializePermutationArray(SEED);
  	t = clock() - t;
  	double time_taken = ((double) t)/CLOCKS_PER_SEC;
