@@ -68,21 +68,27 @@ tile pattern
 -++ - frozen bog
 -+- - crystal forest
 */
-typedef struct { unsigned char TEMP, HUM, SOIL, EXTRA; } POS_PROPERTIES;
 
 typedef struct
 {
 	float X;
 	float Y;
 	float Z;
-	POS_PROPERTIES *PROPS;
+	double N;
 } POS;
 
 typedef struct
 {
-	POS GRID[CHUNK_SIDE_SIZE * MAP_BUFFER_WIDTH]
-			[CHUNK_SIDE_SIZE * MAP_BUFFER_HEIGHT]
-			[CHUNK_SIDE_SIZE * MAP_BUFFER_DEPTH];
+	POS GRID[CHUNK_SIDE_SIZE]
+			[CHUNK_SIDE_SIZE]
+			[CHUNK_SIDE_SIZE];
+} CHUNK;
+
+typedef struct
+{
+	CHUNK C[MAP_BUFFER_WIDTH]
+		   [MAP_BUFFER_HEIGHT]
+		   [MAP_BUFFER_DEPTH];
 } MAP_BUFFER;
 
 typedef struct MAP_PROPERTIES
