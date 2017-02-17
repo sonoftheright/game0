@@ -83,36 +83,33 @@ int main(int argc, char *args[]){
  	printf("Allocating memory for map.\n");
  	MAP_BUFFER *_mP = (MAP_BUFFER *)malloc(sizeof(MAP_BUFFER));
  	memset(_mP, 0, sizeof(MAP_BUFFER));
- 	int w = MAP_BUFFER_WIDTH * CHUNK_SIDE_SIZE,
- 		h = MAP_BUFFER_HEIGHT * CHUNK_SIDE_SIZE,
- 		d = MAP_BUFFER_DEPTH * CHUNK_SIDE_SIZE;
+ 	int w = MAP_BUFFER_WIDTH,
+ 		h = MAP_BUFFER_HEIGHT,
+ 		d = WORLD_HEIGHT;
 	printf("Populating map.\n");
  	clock_t t;
  	t = clock();
  	CHUNK curChunk;
- 	memset(_mP, 0, sizeof(CHUNK));
  	for(int wit = 0; wit < w; wit++)
  	{
  		for(int hit = 0; hit < h; hit++)
  		{
- 			for(int dit = 0; dit < d; dit++)
+ 			curChunk = _mP->C[wit][hit];
+ 			for(int chunkX = 0; chunkX < CHUNK_SIDE_SIZE; chunkX++)
  			{
- 				curChunk = _mP->C[wit][hit][dit];
- 				for(int chunkX = 0; chunkX< CHUNK_SIDE_SIZE; chunkX++)
+ 				for(int chunkY = 0; chunkY < CHUNK_SIDE_SIZE; chunkY++)
  				{
- 					for(int chunkY = 0; chunkY < CHUNK_SIDE_SIZE; chunkY++)
+ 					for(int chunkZ = 0; chunkZ < d; chunkZ++)
  					{
- 						for(int chunkZ = 0; chunkZ < CHUNK_SIDE_SIZE; chunkZ++)
- 						{
- 							curChunk[chunkX][chunkY][chunkZ].X = chunkX*0.1;
- 							curChunk[chunkX][chunkY][chunkZ].Y = chunkY*0.1;
- 							curChunk[chunkX][chunkY][chunkZ].Z = chunkZ*0.1;
- 							curChunk[chunkX][chunkY][chunkZ].N =
- 								Perlin(
- 										curChunk[chunkX][chunkY][chunkZ].X + wit,
- 										curChunk[chunkX][chunkY][chunkZ].Y + hit,
- 										curChunk[chunkX][chunkY][chunkZ].Z + dit);
- 						}
+ 						curChunk.GRID[chunkX][chunkY][chunkZ].X = chunkX*0.01f;
+ 						curChunk.GRID[chunkX][chunkY][chunkZ].Y = chunkY*0.01f;
+ 						curChunk.GRID[chunkX][chunkY][chunkZ].Z = chunkZ*0.01f;
+ 						curChunk.GRID[chunkX][chunkY][chunkZ].N =
+ 							Perlin(
+ 									curChunk.GRID[chunkX][chunkY][chunkZ].X + wit,
+ 									curChunk.GRID[chunkX][chunkY][chunkZ].Y + hit,
+ 									curChunk.GRID[chunkX][chunkY][chunkZ].Z + chunkZ
+ 							);
  					}
  				}
  			}
@@ -124,11 +121,11 @@ int main(int argc, char *args[]){
  	double time_taken = ((double) t)/CLOCKS_PER_SEC;
  	printf("Map population took: %.5f seconds.\n", time_taken);
 	int x = rand() % w, y = rand() % h, z = rand() % d;
-	printMapAtPos(&_mP->C[x][y][z].GRID[x][y][z]);
-	printMapAtPos(&_mP->C[0][0][0].GRID[0][0][0]);
- 	printMapAtPos(&_mP->C[0][1][2].GRID[0][5][2]);
+	printMapAtPos(&_mP->C[x][y].GRID[x][y][z]);
+	printMapAtPos(&_mP->C[0][0].GRID[0][0][65]);
+ 	printMapAtPos(&_mP->C[0][1].GRID[0][5][65]);
  	PLAYER_PROPERTIES Player;
- 	Player.P = &_mP->CHUNK[5][23][12].GRID[12][15][15];
+ 	Player.P = &_mP->C[5][16].GRID[12][15][61];
  	Player.X_POSITION = 124.5f;
  	Player.Y_POSITION = 60.5f;
  	Player.Z_POSITION = 15.5f;
