@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"chunk",
+				"CHUNK_SIDE_SIZE"
+			],
+			[
+				"MAP",
+				"MAP_BUFFER_WIDTH"
+			],
+			[
 				"CHUNK",
 				"CHUNK_SIDE_SIZE"
 			],
@@ -58,10 +66,6 @@
 			[
 				"neighborMa",
 				"neighborMaxZ"
-			],
-			[
-				"MAP",
-				"MAP_HEIGHT"
 			],
 			[
 				"DEF",
@@ -151,7 +155,7 @@
 			"file": "systemstest.cpp",
 			"settings":
 			{
-				"buffer_size": 3671,
+				"buffer_size": 4931,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -160,17 +164,16 @@
 			"file": "systemstest.h",
 			"settings":
 			{
-				"buffer_size": 1854,
+				"buffer_size": 1823,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "perlin.cpp",
+			"file": "/C/Users/Bookstore.RECEIVINGROOM/Downloads/Other/Prog/Jygdaal's Keep/main.c",
 			"settings":
 			{
-				"buffer_size": 2946,
-				"encoding": "UTF-8",
+				"buffer_size": 14980,
 				"line_ending": "Windows"
 			}
 		}
@@ -242,8 +245,8 @@
 	],
 	"file_history":
 	[
-		"/C/Users/Bookstore.RECEIVINGROOM/Downloads/Other/Prog/Practice/game0/build-systemstest.bat",
 		"/C/Users/Bookstore.RECEIVINGROOM/Downloads/Other/Prog/Practice/game0/perlin.cpp",
+		"/C/Users/Bookstore.RECEIVINGROOM/Downloads/Other/Prog/Practice/game0/build-systemstest.bat",
 		"/C/Users/Bookstore.RECEIVINGROOM/AppData/Roaming/Sublime Text 3/Packages/User/build-systemstest.sublime-build",
 		"/C/Users/Bookstore.RECEIVINGROOM/Downloads/Other/Prog/Jygdaal's Keep/main.cpp",
 		"/C/Users/Bookstore.RECEIVINGROOM/Downloads/Other/Prog/Practice/game0/systemstestio.h",
@@ -543,15 +546,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3671,
+						"buffer_size": 4931,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								434,
-								434
+								481,
+								481
 							]
 						],
 						"settings":
@@ -563,15 +566,15 @@
 								{
 									"1":
 									[
-										456,
-										457
+										1821,
+										1822
 									]
 								},
 								"icon":
 								{
 									"1":
 									[
-										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
 										"brackethighlighter.default"
 									]
 								},
@@ -579,8 +582,8 @@
 								{
 									"1":
 									[
-										356,
-										357
+										362,
+										363
 									]
 								},
 								"unmatched":
@@ -589,61 +592,61 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content"
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
 							],
 							"c_time":
 							[
@@ -696,7 +699,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 270.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -708,15 +711,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1854,
+						"buffer_size": 1823,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								63,
-								63
+								170,
+								170
 							]
 						],
 						"settings":
@@ -739,51 +742,21 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
@@ -793,7 +766,37 @@
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
-								"bh_tag_content"
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
 							],
 							"c_time":
 							[
@@ -846,7 +849,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1035.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -854,19 +857,19 @@
 				},
 				{
 					"buffer": 2,
-					"file": "perlin.cpp",
+					"file": "/C/Users/Bookstore.RECEIVINGROOM/Downloads/Other/Prog/Jygdaal's Keep/main.c",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2946,
+						"buffer_size": 14980,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								252,
-								252
+								14286,
+								14286
 							]
 						],
 						"settings":
@@ -878,8 +881,8 @@
 								{
 									"1":
 									[
-										251,
-										252
+										14778,
+										14779
 									]
 								},
 								"icon":
@@ -894,8 +897,8 @@
 								{
 									"1":
 									[
-										137,
-										138
+										12634,
+										12635
 									]
 								},
 								"unmatched":
@@ -904,51 +907,21 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
@@ -958,7 +931,37 @@
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
-								"bh_tag_content"
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
 							],
 							"c_time":
 							[
@@ -988,15 +991,15 @@
 								67,
 								10,
 								7,
-								225,
-								2,
-								2,
+								224,
 								10,
-								21,
-								1,
-								12,
-								88,
-								196,
+								18,
+								10,
+								6,
+								26,
+								0,
+								238,
+								68,
 								113,
 								1,
 								133,
@@ -1007,11 +1010,11 @@
 								3,
 								46
 							],
-							"syntax": "Packages/C++/C++.sublime-syntax",
+							"syntax": "Packages/C++/C.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 6255.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
