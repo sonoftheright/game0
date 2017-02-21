@@ -1,5 +1,5 @@
 //perlin.cpp
-#define PERMUTATION_LENGTH 4096
+#define PERMUTATION_LENGTH 512
 
 int p[PERMUTATION_LENGTH] = {0};
 
@@ -107,7 +107,3 @@ double Perlin(double x, double y, double z)
 
     return (lerp(y1, y2, w)+1)/2;
 }
-
-// float[] perlin(float x, float y, float z)
-// {
-// }

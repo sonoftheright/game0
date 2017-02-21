@@ -10,7 +10,7 @@
 #include <math.h>
 #include <time.h>
 #include <iostream>
-#include <string>
+#include <string.h>
 #include "systemstest.h"
 #include "perlin.cpp"
 
@@ -140,7 +140,6 @@ int main(int argc, char *args[]){
 	printf("Populating map.\n");
  	clock_t t;
  	t = clock();
- 	CHUNK curChunk;
  	float xPerlin, yPerlin, zPerlin;
  	for(int wit = 0; wit < w; wit++)
  	{
