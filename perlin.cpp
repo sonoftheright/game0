@@ -1,6 +1,7 @@
 //perlin.cpp
+#define PERMUTATION_LENGTH 4096
 
-int p[255] = {0};
+int p[PERMUTATION_LENGTH] = {0};
 
 void shuffleIntArray(int length, int *array)
 {
@@ -25,11 +26,11 @@ double fade(double t)
 
 void initPermArray(int seedArgument)
 {
-	for(int x = 1; x <= 256; x++) {	p[x-1] = x; }
+	for(int x = 1; x <= PERMUTATION_LENGTH; x++) {	p[x-1] = x; }
 	srand(seedArgument);
-	shuffleIntArray(255, p);
-	int p[512];
-	for(int x = 0; x < 512; x++) {	p[x] = p[x%256]; }
+	shuffleIntArray(PERMUTATION_LENGTH - 1, p);
+	int p[PERMUTATION_LENGTH * 2];
+	for(int x = 0; x < PERMUTATION_LENGTH * 2; x++) {	p[x] = p[x%PERMUTATION_LENGTH]; }
 }
 
 double grad(int hash, double x, double y, double z)
@@ -57,9 +58,9 @@ double Perlin(double x, double y, double z)
 	// for repeats on the permutation table - i.e., mutations repeating every 256 squares -
 	// you need to see where in the repeat area the point is being placed, and then make
 	// calculations from there.
-	int xunit = (int)x & 255;
-	int yunit = (int)y & 255;
-	int zunit = (int)z & 255;
+	int xunit = (int)x & (PERMUTATION_LENGTH - 1);
+	int yunit = (int)y & (PERMUTATION_LENGTH - 1);
+	int zunit = (int)z & (PERMUTATION_LENGTH - 1);
 
 	// capture the decimal portion of the point value ...
 	double xdecimal = x-(int)x;

@@ -71,7 +71,7 @@ tile pattern
 
 typedef struct
 {
-	float N;
+	double N;
 } POS;
 
 typedef struct

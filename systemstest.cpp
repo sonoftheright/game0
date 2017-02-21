@@ -2,7 +2,7 @@
 * @Author: Benjamin Marquardt
 * @Date:   2017-01-26 13:19:23
 * @Last Modified by:   Benjamin Marquardt
-* @Last Modified time: 2017-02-18 14:04:52
+* @Last Modified time: 2017-02-21 11:38:37
 */
 
 #include <stdlib.h>
@@ -18,46 +18,59 @@
 void
 printMapAtPos(MAP_BUFFER *m, POS *p)
 {
-	float 	sPos,
-			sMB,
+	float 	sMB,
 			numElements,
 			zSize,
 			cSize,
 			hSize,
-			wSize;
-	int 	chunkX,
+			wSize,
+			xSize,
+			ySize;
+	int 	sPos,
+			chunkX,
 			chunkY,
 			sizeChunkX,
 			sizeChunkY,
-			xPos,
-			yPos,
+			posX,
+			posY,
+			posZ;
 	sPos = sizeof(POS);									//size of a position struct
 	sMB  = sizeof(MAP_BUFFER) / sPos;					// size of a full map buffer
 	numElements = (float) ((long)p - (long)m) / sPos;	// number of elements before the current position
-	zSize = WORLD_HEIGHT * sPos;						// size of a z-column of positions
+	zSize = WORLD_HEIGHT;								// size of a z-column of positions
 	cSize = zSize * CHUNK_SIDE_SIZE * CHUNK_SIDE_SIZE;	// size of a chunk
 	hSize = cSize * MAP_BUFFER_HEIGHT;					// size of a two dimensional array of chunks
-	wSize = hSize * MAP_BUFFER_WIDTH;					// size of a cube of chunks - should be equivalent to sMB
-	xPos = MAP_BUFFER_WIDTH;
-	yPos = MAP_BUFFER_HEIGHT;
-	zPos = WORLD_HEIGHT;
+	wSize = hSize * MAP_BUFFER_WIDTH;					// size of a cube of chunks
 	//calculate which chunk we're in
-	sizeChunkX = MAP_BUFFER_WIDTH * cSize;
-	sizeChunkY =
-	chunkX = sMB / sizeChunkX;
-	chunkY = (sMB - (CHUNK_SIDE_SIZE * CHUNK_SIDE_SIZE)) / CHUNK_SIDE_SIZE;
+	chunkX = numElements / hSize;
+	chunkY = (numElements - (hSize * chunkX)) / cSize;
 	//calculate the referred position within that chunk
-	printf("sPos: %.2f\n", 			sPos);
-	printf("sMB: %.2f\n", 			sMB);
-	printf("numElements: %.2f\n", 	numElements);
-	printf("zSize: %.2f\n", 		zSize);
-	printf("cSize: %.2f\n", 		cSize);
-	printf("hSize: %.2f\n", 		hSize);
-	printf("wSize: %.2f\n", 		wSize);
-	printf("chunkX: %d\n", 			chunkX);
-	printf("chunkY: %d\n", 			chunkY);
-	// printf("This will only print point data... x: %.4f y: %.4f z: %.4f\n n: %.4f\n",
-	// 		p->X, p->Y, p->Z, p->N);
+	numElements -= (chunkX * hSize) + (chunkY * cSize); // subtract the chunks of positions before us
+	zSize = 1.0f;
+	ySize = zSize * WORLD_HEIGHT;
+	xSize = ySize * CHUNK_SIDE_SIZE;
+
+	posX  		=  numElements / xSize;
+	numElements -= posX * xSize;
+	posY  		=  numElements / ySize;
+	numElements -= posY * ySize;
+	posZ 		=  numElements / zSize;
+	POS pos = m->C[chunkX][chunkY].GRID[posX][posY][posZ];
+	#if 0
+		printf("sPos: %d\n", 			sPos);
+		printf("sMB: %.2f\n", 			sMB);
+		printf("numElements: %.2f\n", 	numElements);
+		printf("zSize: %.2f\n", 		zSize);
+		printf("cSize: %.2f\n", 		cSize);
+		printf("hSize: %.2f\n", 		hSize);
+		printf("wSize: %.2f\n", 		wSize);
+		printf("sizeChunkX: %d\n", 		sizeChunkX);
+		printf("sizeChunkY: %d\n", 		sizeChunkY);
+		printf("chunkX: %d\n", 			chunkX);
+		printf("chunkY: %d\n", 			chunkY);
+	#endif
+	printf("This will only print point data... x: %d y: %d z: %d\n n: %.4f\n",
+			posX, posY, posZ, pos.N);
 }
 
 void
@@ -128,6 +141,7 @@ int main(int argc, char *args[]){
  	clock_t t;
  	t = clock();
  	CHUNK curChunk;
+ 	float xPerlin, yPerlin, zPerlin;
  	for(int wit = 0; wit < w; wit++)
  	{
  		for(int hit = 0; hit < h; hit++)
@@ -138,12 +152,15 @@ int main(int argc, char *args[]){
  				{
  					for(int chunkZ = 0; chunkZ < d; chunkZ++)
  					{
-						_mP->C[wit][hit].GRID[chunkX][chunkY][chunkZ].N = (float)
- 							Perlin( (float) wit + ( (float) chunkX * 0.01f),
- 									(float) hit + ( (float)chunkY * 0.01f),
-								 + (float) chunkZ);
- 							// if(chunkX == 1 && chunkY == 1 && chunkZ == 1 && wit == 2)
- 								// printMapAtPos(_mP, &_mP->C[wit][hit].GRID[chunkX][chunkY][chunkZ]);
+ 						xPerlin = (wit * CHUNK_SIDE_SIZE) + (chunkX * 0.01f);
+ 						yPerlin = (hit * CHUNK_SIDE_SIZE) + (chunkY * 0.01f);
+ 						zPerlin = chunkZ;
+						_mP->C[wit][hit].GRID[chunkX][chunkY][chunkZ].N =
+							Perlin(xPerlin, yPerlin, zPerlin);
+						if(chunkX == 1 && chunkY == 1 && chunkZ == 1 && wit == 2){
+							printMapAtPos(_mP, &_mP->C[wit][hit].GRID[chunkX][chunkY][chunkZ]);
+							printf("x: %0.2f y: %0.2f z: %0.2f\n", xPerlin, yPerlin, zPerlin);
+						}
  					}
  				}
  			}
@@ -155,11 +172,11 @@ int main(int argc, char *args[]){
  	double time_taken = ((double) t)/CLOCKS_PER_SEC;
  	printf("Map population took: %.5f seconds.\n", time_taken);
 	int x = rand() % w, y = rand() % h, z = rand() % d;
-	// printMapAtPos(_mP, &_mP->C[x][y].GRID[x][y][z]);
-	printMapAtPos(_mP, &_mP->C[0][0].GRID[0][0][65]);
- 	// printMapAtPos(_mP, &_mP->C[0][1].GRID[0][5][65]);
+	printMapAtPos(_mP, &_mP->C[x][y].GRID[x][y][z]);
+	printMapAtPos(_mP, &_mP->C[5][15].GRID[5][5][65]);
+ 	printMapAtPos(_mP, &_mP->C[0][1].GRID[0][5][65]);
  	PLAYER_PROPERTIES Player;
- 	Player.P = &_mP->C[5][16].GRID[12][15][61];
+ 	Player.P = &_mP->C[5][15].GRID[12][15][61];
  	Player.X_POSITION = 124.5f;
  	Player.Y_POSITION = 60.5f;
  	Player.Z_POSITION = 15.5f;
@@ -168,6 +185,6 @@ int main(int argc, char *args[]){
 
  	printf("Size of map in bytes: %f\n", (double) sizeof(*_mP));
 
-	system("PAUSE");
+	//system("PAUSE");
 	return 0;
 }
