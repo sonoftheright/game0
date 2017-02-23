@@ -15,8 +15,8 @@
 #include "perlin.cpp"
 
 //$IO
-void
-printMapAtPos(MAP_BUFFER *m, POS *p)
+COORD
+getCoordinates(MAP_BUFFER *m, POS *p)
 {
 	float 	sMB,
 			numElements,
@@ -72,6 +72,12 @@ printMapAtPos(MAP_BUFFER *m, POS *p)
 	printf("N: %.15f\n", pos.N);
 	// printf("This will only print point data... x: %d y: %d z: %d\n n: %.10f\n",
 			// posX, posY, posZ, pos.N);
+	COORD c;
+	c.x = posX;
+	c.y = posY;
+	c.z = posZ;
+	c.N = pos.N;
+	return c;
 }
 
 void
@@ -152,14 +158,14 @@ int main(int argc, char *args[]){
  				{
  					for(int chunkZ = 0; chunkZ < d; chunkZ++)
  					{
- 						xPerlin = (double) (wit * 0.01f) + (chunkX * 0.001f);
- 						yPerlin = (double) (hit * 0.01f) + (chunkY * 0.001f);
+ 						xPerlin = (double) (wit * 0.01f * CHUNK_SIDE_SIZE) + (chunkX * 0.001f);
+ 						yPerlin = (double) (hit * 0.01f * CHUNK_SIDE_SIZE) + (chunkY * 0.001f);
  						zPerlin = (double) chunkZ * 0.01f;
 						_mP->C[wit][hit].GRID[chunkX][chunkY][chunkZ].N =
 							Perlin(xPerlin, yPerlin, zPerlin);
-						if(chunkX == 1 && chunkY == 1 && chunkZ == 1 & wit == 2 && hit < 20){
-							printMapAtPos(_mP, &_mP->C[wit][hit].GRID[chunkX][chunkY][chunkZ]);
-							// printf("x: %0.3f y: %0.3f z: %0.3f\n", xPerlin, yPerlin, zPerlin);
+						if(chunkX == 15 && chunkY == 14 && chunkZ == 62 & wit < 5){
+							getCoordinates(_mP, &_mP->C[wit][hit].GRID[chunkX][chunkY][chunkZ]);
+							//printf("x: %0.3f y: %0.3f z: %0.3f\n", xPerlin, yPerlin, zPerlin);
 						}
  					}
  				}
@@ -172,14 +178,15 @@ int main(int argc, char *args[]){
  	double time_taken = ((double) t)/CLOCKS_PER_SEC;
  	printf("Map population took: %.5f seconds.\n", time_taken);
 	int x = rand() % w, y = rand() % h, z = rand() % d;
-	printMapAtPos(_mP, &_mP->C[x][y].GRID[x][y][z]);
-	printMapAtPos(_mP, &_mP->C[5][15].GRID[5][5][65]);
- 	printMapAtPos(_mP, &_mP->C[0][1].GRID[0][5][65]);
+	COORD c;
+	c = getCoordinates(_mP, &_mP->C[x][y].GRID[x][y][z]);
+	c = getCoordinates(_mP, &_mP->C[5][15].GRID[5][5][65]);
+ 	c = getCoordinates(_mP, &_mP->C[0][1].GRID[0][5][65]);
  	PLAYER_PROPERTIES Player;
  	Player.P = &_mP->C[5][15].GRID[12][15][61];
- 	Player.X_POSITION = 124.5f;
- 	Player.Y_POSITION = 60.5f;
- 	Player.Z_POSITION = 15.5f;
+ 	Player.X_POSITION = (float) (CHUNK_SIDE_SIZE/2) + (MAP_BUFFER_WIDTH/2);
+ 	Player.Y_POSITION = (float) (CHUNK_SIDE_SIZE/2) + (MAP_BUFFER_HEIGHT/2);
+ 	Player.Z_POSITION = 62.0f;
  	Player.OBJECTS = APPLE | ORANGE;
  	Player.EQUIPPED = CLOTHES_MEAGER | LAMP;
 

@@ -105,5 +105,5 @@ double Perlin(double x, double y, double z)
     			u);
     y2 = lerp(x1, x2, v);
 
-    return (lerp(y1, y2, w)+1)/2;
+    return lerp(y1, y2, w);
 }
