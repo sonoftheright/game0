@@ -1,5 +1,5 @@
 //perlin.cpp
-#define PERMUTATION_LENGTH 512
+#define PERMUTATION_LENGTH 256
 
 int p[PERMUTATION_LENGTH] = {0};
 
@@ -58,9 +58,9 @@ double Perlin(double x, double y, double z)
 	// for repeats on the permutation table - i.e., mutations repeating every 256 squares -
 	// you need to see where in the repeat area the point is being placed, and then make
 	// calculations from there.
-	int xunit = (int)x & (PERMUTATION_LENGTH - 1);
-	int yunit = (int)y & (PERMUTATION_LENGTH - 1);
-	int zunit = (int)z & (PERMUTATION_LENGTH - 1);
+	int xunit = (int) x & (PERMUTATION_LENGTH);
+	int yunit = (int) y & (PERMUTATION_LENGTH);
+	int zunit = (int) z & (PERMUTATION_LENGTH);
 
 	// capture the decimal portion of the point value ...
 	double xdecimal = x-(int)x;
@@ -103,7 +103,7 @@ double Perlin(double x, double y, double z)
     x2 = lerp(  grad(abb, xdecimal,   ydecimal-1, zdecimal-1),
     			grad(bbb, xdecimal-1, ydecimal-1, zdecimal-1),
     			u);
-    y2 = lerp (x1, x2, v);
+    y2 = lerp(x1, x2, v);
 
     return (lerp(y1, y2, w)+1)/2;
 }

@@ -69,8 +69,9 @@ printMapAtPos(MAP_BUFFER *m, POS *p)
 		printf("chunkX: %d\n", 			chunkX);
 		printf("chunkY: %d\n", 			chunkY);
 	#endif
-	printf("This will only print point data... x: %d y: %d z: %d\n n: %.4f\n",
-			posX, posY, posZ, pos.N);
+	printf("N: %.15f\n", pos.N);
+	// printf("This will only print point data... x: %d y: %d z: %d\n n: %.10f\n",
+			// posX, posY, posZ, pos.N);
 }
 
 void
@@ -140,7 +141,7 @@ int main(int argc, char *args[]){
 	printf("Populating map.\n");
  	clock_t t;
  	t = clock();
- 	float xPerlin, yPerlin, zPerlin;
+ 	double xPerlin, yPerlin, zPerlin;
  	for(int wit = 0; wit < w; wit++)
  	{
  		for(int hit = 0; hit < h; hit++)
@@ -151,14 +152,14 @@ int main(int argc, char *args[]){
  				{
  					for(int chunkZ = 0; chunkZ < d; chunkZ++)
  					{
- 						xPerlin = (wit * CHUNK_SIDE_SIZE) + (chunkX * 0.01f);
- 						yPerlin = (hit * CHUNK_SIDE_SIZE) + (chunkY * 0.01f);
- 						zPerlin = chunkZ;
+ 						xPerlin = (double) (wit * 0.01f) + (chunkX * 0.001f);
+ 						yPerlin = (double) (hit * 0.01f) + (chunkY * 0.001f);
+ 						zPerlin = (double) chunkZ * 0.01f;
 						_mP->C[wit][hit].GRID[chunkX][chunkY][chunkZ].N =
 							Perlin(xPerlin, yPerlin, zPerlin);
-						if(chunkX == 1 && chunkY == 1 && chunkZ == 1 && wit == 2){
+						if(chunkX == 1 && chunkY == 1 && chunkZ == 1 & wit == 2 && hit < 20){
 							printMapAtPos(_mP, &_mP->C[wit][hit].GRID[chunkX][chunkY][chunkZ]);
-							printf("x: %0.2f y: %0.2f z: %0.2f\n", xPerlin, yPerlin, zPerlin);
+							// printf("x: %0.3f y: %0.3f z: %0.3f\n", xPerlin, yPerlin, zPerlin);
 						}
  					}
  				}

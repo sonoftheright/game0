@@ -7,7 +7,7 @@
 #define CHUNK_SIDE_SIZE		16
 #define MAP_BUFFER_WIDTH 	16
 #define MAP_BUFFER_HEIGHT 	16
-#define WORLD_HEIGHT		128
+#define WORLD_HEIGHT		256
 #define DEFAULT_SEED		3158582976
 
 extern double SEED = DEFAULT_SEED;
