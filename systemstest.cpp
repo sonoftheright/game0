@@ -114,6 +114,21 @@ MoveMapFocus(DIRECTION d)
 	}
 }
 
+void perlinTest(double r)
+{
+	double value = (PERMUTATION_LENGTH + r);
+	printf("value: %0.5f\n", value);
+	printf("0 0 PERM: %0.7f \n", Perlin(0.0f, 0.0f, value));
+	printf("0 PERM 0: %0.7f \n", Perlin(0.0f, value, 0.0f));
+	printf("PERM 0 0: %0.7f \n", Perlin(value, 0.0f, 0.0f));
+	printf("0 0 0: %0.7f \n", Perlin(0.0f, 0.0f, 0.0f));
+
+	// printf("0 0 PERM", Perlin(0, 0, (double) PERMUTATION_LENGTH));
+	// printf("0 0 PERM", Perlin(0, 0, (double) PERMUTATION_LENGTH));
+	// printf("0 0 PERM", Perlin(0, 0, (double) PERMUTATION_LENGTH));
+
+}
+
 void setSeed(char * argument)
 {
 	double result = 0;
@@ -148,6 +163,12 @@ int main(int argc, char *args[]){
  	clock_t t;
  	t = clock();
  	double xPerlin, yPerlin, zPerlin;
+ 	double random = (SEED / PERMUTATION_LENGTH) - (int) (SEED / PERMUTATION_LENGTH);
+ 	random *= PERMUTATION_LENGTH + random;
+ 	printf("SEED: %0.5f\n", SEED);
+ 	// printf("randomInt: %d\n", randomInt);
+ 	printf("random: %0.5f\n", random);
+ 	double chunk = (CHUNK_SIDE_SIZE * 0.1f) * random;
  	for(int wit = 0; wit < w; wit++)
  	{
  		for(int hit = 0; hit < h; hit++)
@@ -158,15 +179,11 @@ int main(int argc, char *args[]){
  				{
  					for(int chunkZ = 0; chunkZ < d; chunkZ++)
  					{
- 						xPerlin = (double) (wit * 0.01f * CHUNK_SIDE_SIZE) + (chunkX * 0.001f);
- 						yPerlin = (double) (hit * 0.01f * CHUNK_SIDE_SIZE) + (chunkY * 0.001f);
- 						zPerlin = (double) chunkZ * 0.01f;
+ 						xPerlin = (double) (wit * chunk) + (chunkX * 0.01f) + random;
+ 						yPerlin = (double) (hit * chunk) + (chunkY * 0.01f) + random;
+ 						zPerlin = (double) chunkZ + random;
 						_mP->C[wit][hit].GRID[chunkX][chunkY][chunkZ].N =
 							Perlin(xPerlin, yPerlin, zPerlin);
-						if(chunkX == 15 && chunkY == 14 && chunkZ == 62 & wit < 5){
-							getCoordinates(_mP, &_mP->C[wit][hit].GRID[chunkX][chunkY][chunkZ]);
-							//printf("x: %0.3f y: %0.3f z: %0.3f\n", xPerlin, yPerlin, zPerlin);
-						}
  					}
  				}
  			}
@@ -174,6 +191,7 @@ int main(int argc, char *args[]){
  	}
  	printf("Initializing permutation array.\n");
  	initPermArray(SEED);
+ 	perlinTest(random);
  	t = clock() - t;
  	double time_taken = ((double) t)/CLOCKS_PER_SEC;
  	printf("Map population took: %.5f seconds.\n", time_taken);
@@ -182,6 +200,8 @@ int main(int argc, char *args[]){
 	c = getCoordinates(_mP, &_mP->C[x][y].GRID[x][y][z]);
 	c = getCoordinates(_mP, &_mP->C[5][15].GRID[5][5][65]);
  	c = getCoordinates(_mP, &_mP->C[0][1].GRID[0][5][65]);
+ 	c = getCoordinates(_mP, &_mP->C[0][0].GRID[0][0][0]);
+ 	c = getCoordinates(_mP, &_mP->C[15][15].GRID[14][15][250]);
  	PLAYER_PROPERTIES Player;
  	Player.P = &_mP->C[5][15].GRID[12][15][61];
  	Player.X_POSITION = (float) (CHUNK_SIDE_SIZE/2) + (MAP_BUFFER_WIDTH/2);
