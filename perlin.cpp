@@ -1,5 +1,5 @@
 //perlin.cpp
-#define PERMUTATION_LENGTH 1024
+#define PERMUTATION_LENGTH 512
 
 int p[PERMUTATION_LENGTH] = {0};
 
